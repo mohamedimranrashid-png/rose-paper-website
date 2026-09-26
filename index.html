@@ -1,0 +1,692 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Rose Paper · stationery for people with deadlines</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#D9D2FF">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Rose Paper · stationery for people with deadlines">
+<meta property="og:description" content="Paper, pens, files, forms and gifts for Klang Valley offices. Build your list and get a quote on WhatsApp within 2 working hours.">
+<meta property="og:image" content="og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="description" content="Rose Paper, Brickfields KL. Paper, pens, files, forms and gifts for Klang Valley offices. Build your list and get a quote on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --bg:#FFFFFF; --soft:#FFF4F2; --ink:#14142B; --muted:#5E5C72; --line:#EFE3E4;
+  --rose:#F0325A; --rose-deep:#D81E48; --rose-text:#C81F45;
+  --butter:#FFE27A; --lilac:#D9D2FF; --mint:#C4F0DA; --blush:#FFD3DC; --sky:#CFE6FF;
+  --pop-ink:#14142B; --btn:#14142B; --btn-fg:#FFFFFF; --field:#F6F2F2;
+  --display:"Bricolage Grotesque","Arial Black",system-ui,sans-serif;
+  --body:"Figtree",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#11111D; --soft:#1A1A2B; --ink:#FFF6F4; --muted:#B9B5CC; --line:#2C2A42;
+    --rose-text:#FF7390; --btn:#FFF6F4; --btn-fg:#14142B; --field:#22223A;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#11111D; --soft:#1A1A2B; --ink:#FFF6F4; --muted:#B9B5CC; --line:#2C2A42;
+  --rose-text:#FF7390; --btn:#FFF6F4; --btn-fg:#14142B; --field:#22223A;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 var(--body);-webkit-font-smoothing:antialiased}
+h1,h2,h3{margin:0;font-family:var(--display);font-weight:800;letter-spacing:-.025em;line-height:1.02;text-wrap:balance}
+p{margin:0}
+a{color:inherit}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--rose);outline-offset:2px;border-radius:6px}
+.wrap{max-width:1320px;margin:0 auto;padding-inline:clamp(16px,3vw,32px)}
+.ico{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.pill{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;padding:13px 26px;font:700 16px var(--body);text-decoration:none;border:0;cursor:pointer;background:var(--btn);color:var(--btn-fg);transition:transform .15s ease,opacity .15s ease}
+.pill:hover{transform:translateY(-1px)}
+.pill.light{background:#FFFFFF;color:#14142B}
+.pill.rose{background:var(--rose-deep);color:#FFFFFF}
+.block{padding-block:clamp(40px,5vw,64px)}
+.sec-top{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:22px}
+.sec-top h2{font-size:clamp(26px,3vw,34px)}
+.sec-top a,.sec-top button.link{font-weight:700;font-size:15px;text-decoration:underline;text-underline-offset:4px;background:none;border:0;cursor:pointer;white-space:nowrap}
+
+/* announcement */
+.announce{background:#14142B;color:#FFF6F4;font-size:14px;font-weight:600}
+.announce .wrap{display:flex;align-items:center;justify-content:center;gap:12px;min-height:38px}
+.announce button{background:none;border:0;color:#B9B5CC;cursor:pointer;padding:6px;display:grid}
+.announce button .ico{width:16px;height:16px}
+.ann-msg{min-width:0;text-align:center;transition:opacity .3s ease}
+
+/* header */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:var(--bg);border-bottom:1px solid var(--line)}
+.hrow{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:clamp(16px,3vw,40px);padding-block:14px}
+.brand{display:flex;color:var(--ink)}
+.brand svg{height:32px;width:auto;display:block}
+.face-eye{transform-box:fill-box;transform-origin:center}
+.brand:hover .face-eye{animation:blink .5s ease}
+@keyframes blink{40%{transform:scaleY(.1)}}
+.search{position:relative;max-width:620px;width:100%;justify-self:center}
+.search input{width:100%;height:48px;border-radius:999px;border:1.5px solid var(--ink);background:var(--bg);color:var(--ink);padding:0 52px 0 22px;font:16px var(--body)}
+.search input::placeholder{color:var(--muted)}
+.search button{position:absolute;right:5px;top:5px;width:38px;height:38px;border-radius:50%;border:0;background:var(--btn);color:var(--btn-fg);display:grid;place-items:center;cursor:pointer}
+.search button .ico{width:18px;height:18px}
+.hicons{display:flex;gap:6px;align-items:center}
+.hbtn{position:relative;display:flex;align-items:center;gap:8px;background:none;border:0;cursor:pointer;padding:9px 10px;border-radius:999px;text-decoration:none;font-weight:600;font-size:15px}
+.hbtn:hover{background:var(--soft)}
+.hbtn .count{position:absolute;top:2px;left:24px;min-width:19px;height:19px;border-radius:999px;background:var(--rose-deep);color:#fff;font:700 11px/19px var(--body);text-align:center;padding:0 5px}
+.hbtn .lbl{display:inline}
+.catnav{border-top:1px solid var(--line)}
+.catnav ul{display:flex;gap:6px;list-style:none;margin:0 auto;padding:6px 0;overflow-x:auto;scrollbar-width:none;justify-content:center}
+.catnav ul::-webkit-scrollbar{display:none}
+.catnav a{display:block;white-space:nowrap;text-decoration:none;font-weight:600;font-size:15px;padding:8px 14px;border-radius:999px}
+.catnav a:hover{background:var(--soft)}
+.catnav a.hot{color:var(--rose-text)}
+@media (max-width:860px){
+  .hrow{grid-template-columns:auto auto;row-gap:12px}
+  .search{grid-column:1/-1;grid-row:2;max-width:none}
+  .hicons{justify-self:end}
+  .hbtn .lbl{display:none}
+  .brand svg{height:28px}
+  .catnav ul{justify-content:flex-start}
+}
+
+/* hero carousel */
+.hero{position:relative;overflow:hidden}
+.slides{display:flex;transition:transform .6s cubic-bezier(.6,0,.2,1)}
+.slide{flex:0 0 100%;width:100%;min-width:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);min-height:clamp(420px,42vw,560px)}
+.slide .panel{min-width:0;display:flex;flex-direction:column;justify-content:center;gap:22px;padding:clamp(32px,5vw,72px);color:var(--pop-ink)}
+.slide .panel h1,.slide .panel h2{font-size:clamp(40px,5.2vw,84px);line-height:.92;letter-spacing:-.045em;overflow-wrap:break-word}
+.slide .panel p{font-size:18px;max-width:40ch;font-weight:500}
+.slide .img{position:relative;overflow:hidden}
+.slide .img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.slide.ink .panel{background:#14142B;color:#FFF6F4}
+.hl{background:linear-gradient(transparent 58%,var(--butter) 58%,var(--butter) 92%,transparent 92%)}
+.hero-ctrl{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);display:flex;gap:10px;align-items:center;background:#FFFFFF;border-radius:999px;padding:6px 6px 6px 14px;box-shadow:0 2px 10px rgba(20,20,43,.15)}
+.dot{width:10px;height:10px;border-radius:999px;border:0;background:rgba(20,20,43,.3);cursor:pointer;padding:0;transition:width .3s ease,background .3s ease}
+.dot[aria-current="true"]{width:30px;background:#14142B}
+.hero-ctrl .pp{width:30px;height:30px;border-radius:50%;border:0;background:#14142B;color:#FFFFFF;display:grid;place-items:center;cursor:pointer;margin-left:4px}
+.hero-ctrl .pp .ico{width:16px;height:16px}
+@media (max-width:760px){
+  .slide{grid-template-columns:1fr;grid-template-rows:auto 260px}
+  .slide .img{grid-row:2}
+  .hero-ctrl{bottom:auto;top:12px;left:auto;right:16px;transform:none}
+}
+
+/* usp */
+.usp{border-bottom:1px solid var(--line)}
+.usp ul{list-style:none;margin:0;padding:18px 0;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.usp li{display:flex;gap:12px;align-items:center;font-size:14.5px;line-height:1.3}
+.usp li b{display:block;font-size:15px}
+.usp li span{color:var(--muted)}
+.usp .ic{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;flex:none;color:#14142B}
+@media (max-width:900px){.usp ul{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.usp ul{grid-template-columns:1fr}}
+
+/* categories */
+.cats{display:grid;grid-template-columns:repeat(8,1fr);gap:16px}
+.cat{display:grid;gap:10px;justify-items:center;text-align:center;text-decoration:none;font-weight:700;font-size:15px;cursor:pointer;background:none;border:0;padding:0}
+.cat .circ{width:100%;aspect-ratio:1;border-radius:50%;overflow:hidden;display:grid;place-items:center;transition:transform .2s ease;position:relative;max-width:150px}
+.cat:hover .circ{transform:scale(1.04)}
+.cat .circ img{width:100%;height:100%;object-fit:cover}
+.cat .circ .g{font:800 clamp(24px,3vw,38px)/1 var(--display);letter-spacing:-.04em;color:#14142B}
+@media (max-width:980px){.cats{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:120px;overflow-x:auto;padding-bottom:8px;scrollbar-width:thin}}
+
+/* product cards */
+.rail-wrap{position:relative}
+.rail{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 3*20px)/4);gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:4px}
+.rail::-webkit-scrollbar{display:none}
+.rail .p{scroll-snap-align:start}
+@media (max-width:1100px){.rail{grid-auto-columns:calc((100% - 2*20px)/3)}}
+@media (max-width:760px){.rail{grid-auto-columns:72%}}
+.arrows{display:flex;gap:8px}
+.arrows button{width:40px;height:40px;border-radius:50%;border:1.5px solid var(--ink);background:var(--bg);cursor:pointer;display:grid;place-items:center}
+.arrows button .ico{width:18px;height:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,230px),1fr));gap:28px 20px}
+.p{display:flex;flex-direction:column;gap:12px;min-width:0}
+.p-img{position:relative;aspect-ratio:1;border-radius:18px;overflow:hidden;display:grid;place-items:center;color:#14142B}
+.p-img img{width:100%;height:100%;object-fit:cover}
+.p-glyph{font:800 clamp(48px,6vw,76px)/.9 var(--display);letter-spacing:-.05em;text-align:center;padding:0 12px;transition:transform .3s ease}
+.p:hover .p-glyph{transform:scale(1.06) rotate(-2deg)}
+.p-badge{position:absolute;top:12px;left:12px;background:#FFFFFF;color:#14142B;font:700 12px var(--body);padding:5px 10px;border-radius:999px}
+.p-body{display:grid;gap:3px}
+.p-brand{font-size:13px;color:var(--muted);font-weight:600}
+.p-name{font:700 17px/1.3 var(--body);letter-spacing:0}
+.p-spec{font-size:14px;color:var(--muted)}
+.p-price{font-weight:700;font-size:15px;margin-top:4px}
+.p-add{margin-top:auto;width:100%;border-radius:999px;border:1.5px solid var(--ink);background:transparent;padding:11px 14px;font-weight:700;font-size:15px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:background .15s ease,color .15s ease}
+.p-add:hover{background:var(--btn);color:var(--btn-fg)}
+.p-add.on{background:var(--btn);color:var(--btn-fg)}
+.c-lilac{background:var(--lilac)}.c-butter{background:var(--butter)}.c-mint{background:var(--mint)}.c-blush{background:var(--blush)}.c-sky{background:var(--sky)}
+.c-rose{background:var(--rose-deep);color:#FFFFFF}.c-ink{background:#14142B;color:#FFF6F4}
+
+/* promos */
+.promos{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.promo{position:relative;border-radius:24px;overflow:hidden;min-height:400px;display:grid;grid-template-rows:1fr auto;text-decoration:none;color:#14142B}
+.promo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.promo:hover img{transform:scale(1.03)}
+.promo .cap{position:relative;grid-row:2;margin:18px;padding:22px 24px;border-radius:18px;display:grid;gap:8px;max-width:420px}
+.promo h3{font-size:clamp(28px,3vw,38px)}
+.promo .go{font-weight:700;text-decoration:underline;text-underline-offset:4px}
+@media (max-width:760px){.promos{grid-template-columns:1fr}.promo{min-height:340px}}
+
+/* kits */
+.kits{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.kit{border-radius:22px;padding:24px;display:flex;flex-direction:column;gap:14px;color:#14142B}
+.kit h3{font-size:26px}
+.kit ul{margin:0;padding:0;list-style:none;display:grid;gap:0;background:#FFFFFF;border-radius:14px;padding:6px 16px;background-image:repeating-linear-gradient(transparent 0 37px,#E4E9F7 37px 38px);background-position:0 6px}
+.kit li{min-height:38px;display:flex;align-items:center;gap:10px;font-size:15px;font-weight:500}
+.kit li::before{content:"";width:14px;height:14px;border:1.5px solid #14142B;border-radius:4px;flex:none}
+.kit .pill{margin-top:auto}
+@media (max-width:1100px){.kits{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.kits{grid-template-columns:1fr}}
+
+/* shop all */
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px}
+.chip{border:1.5px solid var(--line);background:var(--bg);border-radius:999px;padding:8px 16px;font-weight:600;font-size:15px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--btn);color:var(--btn-fg);border-color:var(--btn)}
+.empty{padding:40px;text-align:center;color:var(--muted);border:1.5px dashed var(--line);border-radius:18px}
+
+/* feature banners */
+.feature{display:grid;grid-template-columns:1fr 1fr;border-radius:28px;overflow:hidden}
+.feature .l{padding:clamp(28px,5vw,64px);display:flex;flex-direction:column;gap:18px;justify-content:center;color:#14142B}
+.feature h2{font-size:clamp(36px,4.6vw,60px);line-height:.95;letter-spacing:-.04em}
+.feature .r{padding:clamp(20px,3vw,40px);display:grid;align-content:center;gap:12px}
+.avatar{width:84px;height:84px;border-radius:50%;background:var(--butter);display:grid;place-items:center;font:800 40px var(--display);color:#14142B}
+.phone{font:800 clamp(30px,3.6vw,44px)/1 var(--display);letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.msg{max-width:86%;padding:12px 16px;border-radius:20px;font-size:15.5px;line-height:1.45;color:#14142B}
+.msg small{display:block;font-size:11px;opacity:.6;margin-top:3px;text-align:right}
+.msg.them{background:#FFFFFF;justify-self:start;border-bottom-left-radius:6px}
+.msg.us{background:var(--butter);justify-self:end;border-bottom-right-radius:6px}
+.chat-lbl{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#4B3FB0}
+@media (max-width:860px){.feature{grid-template-columns:1fr}}
+.visit{display:grid;grid-template-columns:1.2fr 1fr;gap:20px}
+.vcard{border-radius:24px;padding:clamp(24px,3vw,36px);display:grid;gap:14px;align-content:start}
+.vcard .addr{font:800 clamp(26px,3vw,36px)/1.05 var(--display);letter-spacing:-.02em}
+.crow{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;padding-block:12px;border-top:1px solid var(--line)}
+.crow:first-child{border-top:0}
+.crow small{display:block;font-size:13px;color:var(--muted);font-weight:600}
+.crow span{font-weight:700;font-size:18px;font-variant-numeric:tabular-nums}
+.copy{font:700 13px var(--body);background:var(--soft);color:var(--ink);border:0;border-radius:999px;padding:7px 14px;cursor:pointer}
+@media (max-width:860px){.visit{grid-template-columns:1fr}}
+.brands{display:flex;flex-wrap:wrap;gap:10px 26px;justify-content:center;padding-block:28px;border-block:1px solid var(--line);font:800 20px var(--display);letter-spacing:-.02em;color:var(--muted)}
+
+/* footer */
+footer{background:#14142B;color:#FFF6F4;margin-top:clamp(40px,5vw,64px)}
+.fcols{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:32px;padding-block:56px 36px}
+.fcols h4{margin:0 0 14px;font:700 13px var(--body);text-transform:uppercase;letter-spacing:.1em;color:var(--butter)}
+.fcols ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.fcols a{text-decoration:none;color:#E6E2F2}
+.fcols a:hover{color:#FFFFFF;text-decoration:underline}
+.fcols p{color:#B9B5CC;font-size:15px}
+.fcols .join{display:grid;gap:14px}
+.fbig{color:#FFF6F4;display:block;padding-bottom:18px}
+.fbig svg{width:100%;height:auto;display:block}
+.flegal{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;padding-block:18px 26px;border-top:1px solid #2C2A42;color:#9C98B2;font-size:13.5px}
+@media (max-width:860px){.fcols{grid-template-columns:1fr 1fr}.fcols .join{grid-column:1/-1}}
+
+/* drawer */
+.scrim{position:fixed;inset:0;background:rgba(10,10,20,.45);z-index:40;opacity:0;pointer-events:none;transition:opacity .25s ease}
+.scrim.open{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(440px,100%);z-index:41;background:var(--bg);color:var(--ink);transform:translateX(100%);transition:transform .3s cubic-bezier(.6,0,.2,1);display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+.drawer.open{transform:none}
+.dh{display:flex;justify-content:space-between;align-items:center;padding:18px 20px;border-bottom:1px solid var(--line)}
+.dh h2{font-size:24px}
+.dh button{background:none;border:0;cursor:pointer;padding:6px;display:grid}
+.dbody{flex:1;overflow-y:auto;padding:14px 20px;display:grid;align-content:start;gap:14px}
+.line{display:grid;grid-template-columns:56px 1fr auto;gap:12px;align-items:center;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.line .sw{width:56px;height:56px;border-radius:12px;display:grid;place-items:center;font:800 17px var(--display);letter-spacing:-.03em;color:#14142B;overflow:hidden}
+.line .sw img{width:100%;height:100%;object-fit:cover}
+.line b{font-size:15px;line-height:1.3;display:block}
+.line small{color:var(--muted);font-size:13px}
+.qty{display:flex;align-items:center;border:1.5px solid var(--line);border-radius:999px}
+.qty button{width:30px;height:30px;border:0;background:none;cursor:pointer;font-weight:700;font-size:17px}
+.qty span{min-width:22px;text-align:center;font-weight:700;font-variant-numeric:tabular-nums}
+.rm{background:none;border:0;color:var(--muted);font-size:13px;text-decoration:underline;cursor:pointer;padding:0;justify-self:start}
+.dform{display:grid;gap:12px;padding-top:6px}
+.field{display:grid;gap:5px}
+.field label{font-weight:700;font-size:14px}
+.field input,.field select,.field textarea{font:15px var(--body);color:var(--ink);background:var(--field);border:1.5px solid transparent;border-radius:12px;padding:11px 13px;width:100%}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--ink);outline:none}
+.field textarea{min-height:72px;resize:vertical}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.dfoot{padding:16px 20px;border-top:1px solid var(--line);display:grid;gap:10px}
+.dfoot .pill{width:100%}
+.note{font-size:13px;color:var(--muted)}
+.err{color:var(--rose-text);font-weight:600;font-size:14px}
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);z-index:50;background:#14142B;color:#FFF6F4;border-radius:999px;padding:12px 20px;font-weight:600;font-size:15px;opacity:0;pointer-events:none;transition:opacity .2s ease,transform .2s ease;display:flex;gap:12px;align-items:center}
+.toast.show{opacity:1;transform:translate(-50%,0);pointer-events:auto}
+.toast button{background:var(--butter);color:#14142B;border:0;border-radius:999px;padding:6px 12px;font-weight:700;cursor:pointer}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="logo" viewBox="-40 20 4500 1030"><path d="M36.0 820.0V533.0V292.0H176.0V502.0H184.0Q190.0 418.0 207.5 369.5Q225.0 321.0 251.5 300.5Q278.0 280.0 311.0 280.0Q329.0 280.0 348.5 285.0Q368.0 290.0 387.0 301.0L379.0 481.0Q357.0 468.0 336.0 461.5Q315.0 455.0 296.0 455.0Q264.0 455.0 242.0 473.0Q220.0 491.0 208.5 526.0Q197.0 561.0 197.0 611.0V820.0ZM1138.0 834.0Q1085.0 834.0 1039.5 823.5Q994.0 813.0 960.5 790.0Q927.0 767.0 909.5 728.5Q892.0 690.0 895.0 635.0L1036.0 623.0Q1038.0 656.0 1051.0 677.5Q1064.0 699.0 1087.0 709.0Q1110.0 719.0 1143.0 719.0Q1174.0 719.0 1196.5 708.5Q1219.0 698.0 1219.0 673.0Q1219.0 660.0 1211.0 651.5Q1203.0 643.0 1181.5 635.5Q1160.0 628.0 1119.0 618.0Q1068.0 605.0 1027.0 592.0Q986.0 579.0 957.0 561.0Q928.0 543.0 913.0 516.5Q898.0 490.0 898.0 451.0Q898.0 396.0 927.5 357.5Q957.0 319.0 1009.0 298.5Q1061.0 278.0 1129.0 278.0Q1190.0 278.0 1243.0 297.0Q1296.0 316.0 1326.5 359.0Q1357.0 402.0 1349.0 473.0L1211.0 486.0Q1214.0 457.0 1203.0 436.5Q1192.0 416.0 1171.0 405.5Q1150.0 395.0 1120.0 395.0Q1086.0 395.0 1067.5 407.5Q1049.0 420.0 1049.0 439.0Q1049.0 454.0 1060.5 464.5Q1072.0 475.0 1096.5 482.5Q1121.0 490.0 1160.0 499.0Q1194.0 506.0 1231.0 517.0Q1268.0 528.0 1300.0 546.5Q1332.0 565.0 1352.0 595.0Q1372.0 625.0 1372.0 671.0Q1372.0 720.0 1345.0 757.0Q1318.0 794.0 1266.0 814.0Q1214.0 834.0 1138.0 834.0ZM1627.0 834.0Q1552.0 834.0 1501.5 812.5Q1451.0 791.0 1420.0 753.5Q1389.0 716.0 1375.5 668.0Q1362.0 620.0 1362.0 567.0Q1362.0 510.0 1376.5 458.0Q1391.0 406.0 1421.5 365.5Q1452.0 325.0 1500.5 301.5Q1549.0 278.0 1617.0 278.0Q1685.0 278.0 1733.5 301.5Q1782.0 325.0 1811.0 367.0Q1840.0 409.0 1848.5 464.0Q1857.0 519.0 1846.0 583.0L1463.0 589.0V501.0L1722.0 496.0L1701.0 547.0Q1707.0 501.0 1699.5 469.5Q1692.0 438.0 1672.0 421.5Q1652.0 405.0 1617.0 405.0Q1580.0 405.0 1558.0 424.0Q1536.0 443.0 1527.0 477.5Q1518.0 512.0 1518.0 559.0Q1518.0 640.0 1545.0 677.0Q1572.0 714.0 1628.0 714.0Q1652.0 714.0 1668.0 708.0Q1684.0 702.0 1694.0 690.5Q1704.0 679.0 1708.0 662.5Q1712.0 646.0 1711.0 625.0L1859.0 633.0Q1862.0 666.0 1852.5 701.0Q1843.0 736.0 1817.0 766.0Q1791.0 796.0 1744.5 815.0Q1698.0 834.0 1627.0 834.0ZM2020.0 968.0V480.0V292.0H2162.0V455.0H2169.0Q2180.0 396.0 2202.0 356.5Q2224.0 317.0 2258.5 297.5Q2293.0 278.0 2342.0 278.0Q2404.0 278.0 2447.5 309.5Q2491.0 341.0 2513.5 402.5Q2536.0 464.0 2536.0 554.0Q2536.0 651.0 2510.5 713.0Q2485.0 775.0 2441.0 804.5Q2397.0 834.0 2341.0 834.0Q2296.0 834.0 2261.5 815.0Q2227.0 796.0 2204.5 756.5Q2182.0 717.0 2173.0 657.0H2164.0Q2169.0 686.0 2173.0 717.5Q2177.0 749.0 2179.5 779.5Q2182.0 810.0 2182.0 838.0V968.0ZM2280.0 701.0Q2312.0 701.0 2332.5 681.0Q2353.0 661.0 2362.5 628.5Q2372.0 596.0 2372.0 560.0Q2372.0 520.0 2361.5 487.5Q2351.0 455.0 2330.5 435.5Q2310.0 416.0 2280.0 416.0Q2261.0 416.0 2243.0 424.5Q2225.0 433.0 2211.0 450.5Q2197.0 468.0 2188.5 495.0Q2180.0 522.0 2180.0 560.0V566.0Q2180.0 596.0 2186.0 618.0Q2192.0 640.0 2202.0 656.0Q2212.0 672.0 2225.0 682.0Q2238.0 692.0 2252.0 696.5Q2266.0 701.0 2280.0 701.0ZM2685.0 834.0Q2645.0 834.0 2609.0 820.0Q2573.0 806.0 2550.0 774.5Q2527.0 743.0 2527.0 690.0Q2527.0 641.0 2546.0 610.5Q2565.0 580.0 2597.0 561.5Q2629.0 543.0 2667.0 533.5Q2705.0 524.0 2742.0 517.0Q2794.0 507.0 2820.0 501.0Q2846.0 495.0 2855.5 487.0Q2865.0 479.0 2865.0 465.0Q2865.0 436.0 2843.5 421.0Q2822.0 406.0 2787.0 406.0Q2765.0 406.0 2743.0 414.0Q2721.0 422.0 2707.0 442.5Q2693.0 463.0 2694.0 501.0L2550.0 491.0Q2548.0 428.0 2569.0 386.5Q2590.0 345.0 2626.5 321.5Q2663.0 298.0 2706.5 288.0Q2750.0 278.0 2793.0 278.0Q2872.0 278.0 2923.0 307.5Q2974.0 337.0 2998.5 392.5Q3023.0 448.0 3023.0 527.0V621.0Q3023.0 654.0 3023.0 687.5Q3023.0 721.0 3023.0 754.0Q3023.0 787.0 3023.0 820.0H2883.0Q2883.0 784.0 2883.0 747.0Q2883.0 710.0 2883.0 669.0H2877.0Q2873.0 714.0 2847.5 751.5Q2822.0 789.0 2780.5 811.5Q2739.0 834.0 2685.0 834.0ZM2752.0 716.0Q2769.0 716.0 2788.5 709.5Q2808.0 703.0 2825.5 688.0Q2843.0 673.0 2854.0 646.5Q2865.0 620.0 2865.0 581.0V557.0L2892.0 554.0Q2884.0 567.0 2865.5 575.0Q2847.0 583.0 2824.0 587.5Q2801.0 592.0 2777.5 596.5Q2754.0 601.0 2734.0 608.5Q2714.0 616.0 2701.5 628.5Q2689.0 641.0 2689.0 663.0Q2689.0 689.0 2707.5 702.5Q2726.0 716.0 2752.0 716.0ZM3041.0 968.0V480.0V292.0H3183.0V455.0H3190.0Q3201.0 396.0 3223.0 356.5Q3245.0 317.0 3279.5 297.5Q3314.0 278.0 3363.0 278.0Q3425.0 278.0 3468.5 309.5Q3512.0 341.0 3534.5 402.5Q3557.0 464.0 3557.0 554.0Q3557.0 651.0 3531.5 713.0Q3506.0 775.0 3462.0 804.5Q3418.0 834.0 3362.0 834.0Q3317.0 834.0 3282.5 815.0Q3248.0 796.0 3225.5 756.5Q3203.0 717.0 3194.0 657.0H3185.0Q3190.0 686.0 3194.0 717.5Q3198.0 749.0 3200.5 779.5Q3203.0 810.0 3203.0 838.0V968.0ZM3301.0 701.0Q3333.0 701.0 3353.5 681.0Q3374.0 661.0 3383.5 628.5Q3393.0 596.0 3393.0 560.0Q3393.0 520.0 3382.5 487.5Q3372.0 455.0 3351.5 435.5Q3331.0 416.0 3301.0 416.0Q3282.0 416.0 3264.0 424.5Q3246.0 433.0 3232.0 450.5Q3218.0 468.0 3209.5 495.0Q3201.0 522.0 3201.0 560.0V566.0Q3201.0 596.0 3207.0 618.0Q3213.0 640.0 3223.0 656.0Q3233.0 672.0 3246.0 682.0Q3259.0 692.0 3273.0 696.5Q3287.0 701.0 3301.0 701.0ZM3818.0 834.0Q3743.0 834.0 3692.5 812.5Q3642.0 791.0 3611.0 753.5Q3580.0 716.0 3566.5 668.0Q3553.0 620.0 3553.0 567.0Q3553.0 510.0 3567.5 458.0Q3582.0 406.0 3612.5 365.5Q3643.0 325.0 3691.5 301.5Q3740.0 278.0 3808.0 278.0Q3876.0 278.0 3924.5 301.5Q3973.0 325.0 4002.0 367.0Q4031.0 409.0 4039.5 464.0Q4048.0 519.0 4037.0 583.0L3654.0 589.0V501.0L3913.0 496.0L3892.0 547.0Q3898.0 501.0 3890.5 469.5Q3883.0 438.0 3863.0 421.5Q3843.0 405.0 3808.0 405.0Q3771.0 405.0 3749.0 424.0Q3727.0 443.0 3718.0 477.5Q3709.0 512.0 3709.0 559.0Q3709.0 640.0 3736.0 677.0Q3763.0 714.0 3819.0 714.0Q3843.0 714.0 3859.0 708.0Q3875.0 702.0 3885.0 690.5Q3895.0 679.0 3899.0 662.5Q3903.0 646.0 3902.0 625.0L4050.0 633.0Q4053.0 666.0 4043.5 701.0Q4034.0 736.0 4008.0 766.0Q3982.0 796.0 3935.5 815.0Q3889.0 834.0 3818.0 834.0ZM4056.0 820.0V533.0V292.0H4196.0V502.0H4204.0Q4210.0 418.0 4227.5 369.5Q4245.0 321.0 4271.5 300.5Q4298.0 280.0 4331.0 280.0Q4349.0 280.0 4368.5 285.0Q4388.0 290.0 4407.0 301.0L4399.0 481.0Q4377.0 468.0 4356.0 461.5Q4335.0 455.0 4316.0 455.0Q4284.0 455.0 4262.0 473.0Q4240.0 491.0 4228.5 526.0Q4217.0 561.0 4217.0 611.0V820.0Z" fill="currentColor"/><circle cx="635.5" cy="556.0" r="294.7" fill="#F0325A"/><circle class="face-eye" cx="542.4" cy="494.0" r="41.9" fill="#14142B"/><circle class="face-eye" cx="728.6" cy="494.0" r="41.9" fill="#14142B"/><path d="M511.4 602.5 Q635.5 734.4 759.6 602.5" fill="none" stroke="#14142B" stroke-width="49.6" stroke-linecap="round"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><path d="M6 7h12l1 13H5Z"/><path d="M9 7a3 3 0 0 1 6 0"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+    <symbol id="i-l" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+    <symbol id="i-r" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><path d="M9 5v14"/><path d="M15 5v14"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="m7 4 13 8-13 8Z"/></symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-receipt" viewBox="0 0 24 24"><path d="M5 3v18l2-1.5 2 1.5 2-1.5 2 1.5 2-1.5 2 1.5 2-1.5V3l-2 1.5L15 3l-2 1.5L11 3 9 4.5 7 3Z"/><path d="M9 9h6"/><path d="M9 13h6"/></symbol>
+    <symbol id="i-store" viewBox="0 0 24 24"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"/><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4"/><path d="M2 7h20"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14"/><path d="M5 12h14"/></symbol>
+  </defs>
+</svg>
+
+<div class="announce" role="region" aria-label="Announcements">
+  <div class="wrap">
+    <button type="button" id="ann-prev" aria-label="Previous announcement"><svg class="ico"><use href="#i-l"/></svg></button>
+    <p class="ann-msg" id="ann-msg" aria-live="polite">Build your list, send it on WhatsApp, get a quote within 2 working hours</p>
+    <button type="button" id="ann-next" aria-label="Next announcement"><svg class="ico"><use href="#i-r"/></svg></button>
+  </div>
+</div>
+
+<header>
+  <div class="wrap hrow">
+    <a class="brand" href="#top" aria-label="Rose Paper home"><svg viewBox="-40 20 4500 1030" role="img" aria-label="Rose Paper"><path d="M36.0 820.0V533.0V292.0H176.0V502.0H184.0Q190.0 418.0 207.5 369.5Q225.0 321.0 251.5 300.5Q278.0 280.0 311.0 280.0Q329.0 280.0 348.5 285.0Q368.0 290.0 387.0 301.0L379.0 481.0Q357.0 468.0 336.0 461.5Q315.0 455.0 296.0 455.0Q264.0 455.0 242.0 473.0Q220.0 491.0 208.5 526.0Q197.0 561.0 197.0 611.0V820.0ZM1138.0 834.0Q1085.0 834.0 1039.5 823.5Q994.0 813.0 960.5 790.0Q927.0 767.0 909.5 728.5Q892.0 690.0 895.0 635.0L1036.0 623.0Q1038.0 656.0 1051.0 677.5Q1064.0 699.0 1087.0 709.0Q1110.0 719.0 1143.0 719.0Q1174.0 719.0 1196.5 708.5Q1219.0 698.0 1219.0 673.0Q1219.0 660.0 1211.0 651.5Q1203.0 643.0 1181.5 635.5Q1160.0 628.0 1119.0 618.0Q1068.0 605.0 1027.0 592.0Q986.0 579.0 957.0 561.0Q928.0 543.0 913.0 516.5Q898.0 490.0 898.0 451.0Q898.0 396.0 927.5 357.5Q957.0 319.0 1009.0 298.5Q1061.0 278.0 1129.0 278.0Q1190.0 278.0 1243.0 297.0Q1296.0 316.0 1326.5 359.0Q1357.0 402.0 1349.0 473.0L1211.0 486.0Q1214.0 457.0 1203.0 436.5Q1192.0 416.0 1171.0 405.5Q1150.0 395.0 1120.0 395.0Q1086.0 395.0 1067.5 407.5Q1049.0 420.0 1049.0 439.0Q1049.0 454.0 1060.5 464.5Q1072.0 475.0 1096.5 482.5Q1121.0 490.0 1160.0 499.0Q1194.0 506.0 1231.0 517.0Q1268.0 528.0 1300.0 546.5Q1332.0 565.0 1352.0 595.0Q1372.0 625.0 1372.0 671.0Q1372.0 720.0 1345.0 757.0Q1318.0 794.0 1266.0 814.0Q1214.0 834.0 1138.0 834.0ZM1627.0 834.0Q1552.0 834.0 1501.5 812.5Q1451.0 791.0 1420.0 753.5Q1389.0 716.0 1375.5 668.0Q1362.0 620.0 1362.0 567.0Q1362.0 510.0 1376.5 458.0Q1391.0 406.0 1421.5 365.5Q1452.0 325.0 1500.5 301.5Q1549.0 278.0 1617.0 278.0Q1685.0 278.0 1733.5 301.5Q1782.0 325.0 1811.0 367.0Q1840.0 409.0 1848.5 464.0Q1857.0 519.0 1846.0 583.0L1463.0 589.0V501.0L1722.0 496.0L1701.0 547.0Q1707.0 501.0 1699.5 469.5Q1692.0 438.0 1672.0 421.5Q1652.0 405.0 1617.0 405.0Q1580.0 405.0 1558.0 424.0Q1536.0 443.0 1527.0 477.5Q1518.0 512.0 1518.0 559.0Q1518.0 640.0 1545.0 677.0Q1572.0 714.0 1628.0 714.0Q1652.0 714.0 1668.0 708.0Q1684.0 702.0 1694.0 690.5Q1704.0 679.0 1708.0 662.5Q1712.0 646.0 1711.0 625.0L1859.0 633.0Q1862.0 666.0 1852.5 701.0Q1843.0 736.0 1817.0 766.0Q1791.0 796.0 1744.5 815.0Q1698.0 834.0 1627.0 834.0ZM2020.0 968.0V480.0V292.0H2162.0V455.0H2169.0Q2180.0 396.0 2202.0 356.5Q2224.0 317.0 2258.5 297.5Q2293.0 278.0 2342.0 278.0Q2404.0 278.0 2447.5 309.5Q2491.0 341.0 2513.5 402.5Q2536.0 464.0 2536.0 554.0Q2536.0 651.0 2510.5 713.0Q2485.0 775.0 2441.0 804.5Q2397.0 834.0 2341.0 834.0Q2296.0 834.0 2261.5 815.0Q2227.0 796.0 2204.5 756.5Q2182.0 717.0 2173.0 657.0H2164.0Q2169.0 686.0 2173.0 717.5Q2177.0 749.0 2179.5 779.5Q2182.0 810.0 2182.0 838.0V968.0ZM2280.0 701.0Q2312.0 701.0 2332.5 681.0Q2353.0 661.0 2362.5 628.5Q2372.0 596.0 2372.0 560.0Q2372.0 520.0 2361.5 487.5Q2351.0 455.0 2330.5 435.5Q2310.0 416.0 2280.0 416.0Q2261.0 416.0 2243.0 424.5Q2225.0 433.0 2211.0 450.5Q2197.0 468.0 2188.5 495.0Q2180.0 522.0 2180.0 560.0V566.0Q2180.0 596.0 2186.0 618.0Q2192.0 640.0 2202.0 656.0Q2212.0 672.0 2225.0 682.0Q2238.0 692.0 2252.0 696.5Q2266.0 701.0 2280.0 701.0ZM2685.0 834.0Q2645.0 834.0 2609.0 820.0Q2573.0 806.0 2550.0 774.5Q2527.0 743.0 2527.0 690.0Q2527.0 641.0 2546.0 610.5Q2565.0 580.0 2597.0 561.5Q2629.0 543.0 2667.0 533.5Q2705.0 524.0 2742.0 517.0Q2794.0 507.0 2820.0 501.0Q2846.0 495.0 2855.5 487.0Q2865.0 479.0 2865.0 465.0Q2865.0 436.0 2843.5 421.0Q2822.0 406.0 2787.0 406.0Q2765.0 406.0 2743.0 414.0Q2721.0 422.0 2707.0 442.5Q2693.0 463.0 2694.0 501.0L2550.0 491.0Q2548.0 428.0 2569.0 386.5Q2590.0 345.0 2626.5 321.5Q2663.0 298.0 2706.5 288.0Q2750.0 278.0 2793.0 278.0Q2872.0 278.0 2923.0 307.5Q2974.0 337.0 2998.5 392.5Q3023.0 448.0 3023.0 527.0V621.0Q3023.0 654.0 3023.0 687.5Q3023.0 721.0 3023.0 754.0Q3023.0 787.0 3023.0 820.0H2883.0Q2883.0 784.0 2883.0 747.0Q2883.0 710.0 2883.0 669.0H2877.0Q2873.0 714.0 2847.5 751.5Q2822.0 789.0 2780.5 811.5Q2739.0 834.0 2685.0 834.0ZM2752.0 716.0Q2769.0 716.0 2788.5 709.5Q2808.0 703.0 2825.5 688.0Q2843.0 673.0 2854.0 646.5Q2865.0 620.0 2865.0 581.0V557.0L2892.0 554.0Q2884.0 567.0 2865.5 575.0Q2847.0 583.0 2824.0 587.5Q2801.0 592.0 2777.5 596.5Q2754.0 601.0 2734.0 608.5Q2714.0 616.0 2701.5 628.5Q2689.0 641.0 2689.0 663.0Q2689.0 689.0 2707.5 702.5Q2726.0 716.0 2752.0 716.0ZM3041.0 968.0V480.0V292.0H3183.0V455.0H3190.0Q3201.0 396.0 3223.0 356.5Q3245.0 317.0 3279.5 297.5Q3314.0 278.0 3363.0 278.0Q3425.0 278.0 3468.5 309.5Q3512.0 341.0 3534.5 402.5Q3557.0 464.0 3557.0 554.0Q3557.0 651.0 3531.5 713.0Q3506.0 775.0 3462.0 804.5Q3418.0 834.0 3362.0 834.0Q3317.0 834.0 3282.5 815.0Q3248.0 796.0 3225.5 756.5Q3203.0 717.0 3194.0 657.0H3185.0Q3190.0 686.0 3194.0 717.5Q3198.0 749.0 3200.5 779.5Q3203.0 810.0 3203.0 838.0V968.0ZM3301.0 701.0Q3333.0 701.0 3353.5 681.0Q3374.0 661.0 3383.5 628.5Q3393.0 596.0 3393.0 560.0Q3393.0 520.0 3382.5 487.5Q3372.0 455.0 3351.5 435.5Q3331.0 416.0 3301.0 416.0Q3282.0 416.0 3264.0 424.5Q3246.0 433.0 3232.0 450.5Q3218.0 468.0 3209.5 495.0Q3201.0 522.0 3201.0 560.0V566.0Q3201.0 596.0 3207.0 618.0Q3213.0 640.0 3223.0 656.0Q3233.0 672.0 3246.0 682.0Q3259.0 692.0 3273.0 696.5Q3287.0 701.0 3301.0 701.0ZM3818.0 834.0Q3743.0 834.0 3692.5 812.5Q3642.0 791.0 3611.0 753.5Q3580.0 716.0 3566.5 668.0Q3553.0 620.0 3553.0 567.0Q3553.0 510.0 3567.5 458.0Q3582.0 406.0 3612.5 365.5Q3643.0 325.0 3691.5 301.5Q3740.0 278.0 3808.0 278.0Q3876.0 278.0 3924.5 301.5Q3973.0 325.0 4002.0 367.0Q4031.0 409.0 4039.5 464.0Q4048.0 519.0 4037.0 583.0L3654.0 589.0V501.0L3913.0 496.0L3892.0 547.0Q3898.0 501.0 3890.5 469.5Q3883.0 438.0 3863.0 421.5Q3843.0 405.0 3808.0 405.0Q3771.0 405.0 3749.0 424.0Q3727.0 443.0 3718.0 477.5Q3709.0 512.0 3709.0 559.0Q3709.0 640.0 3736.0 677.0Q3763.0 714.0 3819.0 714.0Q3843.0 714.0 3859.0 708.0Q3875.0 702.0 3885.0 690.5Q3895.0 679.0 3899.0 662.5Q3903.0 646.0 3902.0 625.0L4050.0 633.0Q4053.0 666.0 4043.5 701.0Q4034.0 736.0 4008.0 766.0Q3982.0 796.0 3935.5 815.0Q3889.0 834.0 3818.0 834.0ZM4056.0 820.0V533.0V292.0H4196.0V502.0H4204.0Q4210.0 418.0 4227.5 369.5Q4245.0 321.0 4271.5 300.5Q4298.0 280.0 4331.0 280.0Q4349.0 280.0 4368.5 285.0Q4388.0 290.0 4407.0 301.0L4399.0 481.0Q4377.0 468.0 4356.0 461.5Q4335.0 455.0 4316.0 455.0Q4284.0 455.0 4262.0 473.0Q4240.0 491.0 4228.5 526.0Q4217.0 561.0 4217.0 611.0V820.0Z" fill="currentColor"/><circle cx="635.5" cy="556.0" r="294.7" fill="#F0325A"/><circle class="face-eye" cx="542.4" cy="494.0" r="41.9" fill="#14142B"/><circle class="face-eye" cx="728.6" cy="494.0" r="41.9" fill="#14142B"/><path d="M511.4 602.5 Q635.5 734.4 759.6 602.5" fill="none" stroke="#14142B" stroke-width="49.6" stroke-linecap="round"/></svg></a>
+    <form class="search" id="search" role="search">
+      <label for="q" class="sr" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Search products</label>
+      <input id="q" type="search" placeholder="What are you looking for? Try “A4” or “files”" autocomplete="off">
+      <button type="submit" aria-label="Search"><svg class="ico"><use href="#i-search"/></svg></button>
+    </form>
+    <div class="hicons">
+      <a class="hbtn" href="https://wa.me/60122002685" target="_blank" rel="noopener"><svg class="ico"><use href="#i-chat"/></svg><span class="lbl">012-200 2685</span></a>
+      <button class="hbtn" type="button" id="open-bag" aria-label="Open your quote list"><svg class="ico"><use href="#i-bag"/></svg><span class="count" id="bag-count" hidden>0</span><span class="lbl">Quote list</span></button>
+    </div>
+  </div>
+  <nav class="catnav" aria-label="Categories">
+    <ul class="wrap">
+      <li><a href="#shop" data-cat="paper">Paper</a></li>
+      <li><a href="#shop" data-cat="filing">Filing</a></li>
+      <li><a href="#shop" data-cat="writing">Writing</a></li>
+      <li><a href="#shop" data-cat="desk">Desk</a></li>
+      <li><a href="#shop" data-cat="forms">Forms &amp; stamps</a></li>
+      <li><a href="#shop" data-cat="gifts">Gifts &amp; leather</a></li>
+      <li><a href="#shop" data-cat="school">School &amp; art</a></li>
+      <li><a href="#kits" class="hot">Office kits</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero" aria-roledescription="carousel" aria-label="Highlights">
+    <div class="slides" id="slides">
+      <div class="slide" role="group" aria-roledescription="slide" aria-label="1 of 3">
+        <div class="panel c-lilac">
+          <h1>stationery for people with <span class="hl">deadlines.</span></h1>
+          <p>Paper, pens, files and forms for KL offices. Add what you need, send it on WhatsApp, and get a quote within 2 working hours.</p>
+          <div><a class="pill" href="#staples">Start your list</a></div>
+        </div>
+        <div class="img"><img src="img/cover.jpg" alt="A4 paper, a red arch file, a notebook, highlighters, pens and a calculator on a desk" width="1046" height="1400"></div>
+      </div>
+      <div class="slide" role="group" aria-roledescription="slide" aria-label="2 of 3">
+        <div class="panel c-butter">
+          <h2>audit season? sorted.</h2>
+          <p>Lever arch files in 8+ colours, A–Z and Jan–Dec dividers, foolscap and calculators, delivered before the auditors arrive.</p>
+          <div><a class="pill" href="#kits">Get the audit kit</a></div>
+        </div>
+        <div class="img"><img src="img/filing.jpg" alt="Coloured lever arch files and index dividers on a shelf" width="1400" height="1050"></div>
+      </div>
+      <div class="slide ink" role="group" aria-roledescription="slide" aria-label="3 of 3">
+        <div class="panel">
+          <h2>gifts that don't look last-minute.</h2>
+          <p>Leather journals, portfolios and pen sets for clients, events and staff.</p>
+          <div><a class="pill light" href="#shop" data-cat="gifts">Shop gifts</a></div>
+        </div>
+        <div class="img"><img src="img/gifts.jpg" alt="A leather journal, portfolio, boxed pen and a red gift box" width="1400" height="1050"></div>
+      </div>
+    </div>
+    <div class="hero-ctrl">
+      <button class="dot" type="button" aria-label="Show slide 1" aria-current="true"></button>
+      <button class="dot" type="button" aria-label="Show slide 2"></button>
+      <button class="dot" type="button" aria-label="Show slide 3"></button>
+      <button class="pp" type="button" id="pp" aria-label="Pause slideshow"><svg class="ico"><use href="#i-pause"/></svg></button>
+    </div>
+  </section>
+
+  <div class="usp">
+    <ul class="wrap">
+      <li><span class="ic c-mint"><svg class="ico"><use href="#i-clock"/></svg></span><div><b>Quote in 2 working hours</b><span>Side by side with your current prices</span></div></li>
+      <li><span class="ic c-butter"><svg class="ico"><use href="#i-truck"/></svg></span><div><b>Klang Valley delivery</b><span>Offices, clinics, branches and sites</span></div></li>
+      <li><span class="ic c-lilac"><svg class="ico"><use href="#i-receipt"/></svg></span><div><b>One monthly invoice</b><span>For approved business accounts</span></div></li>
+      <li><span class="ic c-blush"><svg class="ico"><use href="#i-store"/></svg></span><div><b>Walk-in store</b><span>Brickfields, near KL Sentral</span></div></li>
+    </ul>
+  </div>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="sec-top"><h2>Shop by category</h2></div>
+      <div class="cats">
+        <a class="cat" href="#shop" data-cat="paper"><span class="circ c-lilac"><span class="g">A4</span></span>Paper</a>
+        <a class="cat" href="#shop" data-cat="filing"><span class="circ c-butter"><img src="img/filing.jpg" alt="" loading="lazy"></span>Filing</a>
+        <a class="cat" href="#shop" data-cat="writing"><span class="circ c-mint"><img src="img/pens.jpg" alt="" loading="lazy"></span>Writing</a>
+        <a class="cat" href="#shop" data-cat="desk"><span class="circ c-blush"><img src="img/desk.jpg" alt="" loading="lazy"></span>Desk</a>
+        <a class="cat" href="#shop" data-cat="forms"><span class="circ c-rose"><span class="g" style="color:#fff">3‑ply</span></span>Forms &amp; stamps</a>
+        <a class="cat" href="#shop" data-cat="gifts"><span class="circ c-ink"><img src="img/gifts.jpg" alt="" loading="lazy"></span>Gifts</a>
+        <a class="cat" href="#shop" data-cat="school"><span class="circ c-sky"><span class="g">abc</span></span>School &amp; art</a>
+        <a class="cat" href="#kits"><span class="circ c-butter"><svg viewBox="0 0 100 100" width="62%" aria-hidden="true"><circle cx="50" cy="50" r="46" fill="#F0325A"/><circle cx="36" cy="40" r="6.5" fill="#14142B"/><circle cx="64" cy="40" r="6.5" fill="#14142B"/><path d="M30 58 Q50 78 70 58" fill="none" stroke="#14142B" stroke-width="7.5" stroke-linecap="round"/></svg></span>Office kits</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="staples" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-top"><h2>Office staples</h2><div class="arrows"><button type="button" id="rail-l" aria-label="Scroll left"><svg class="ico"><use href="#i-l"/></svg></button><button type="button" id="rail-r" aria-label="Scroll right"><svg class="ico"><use href="#i-r"/></svg></button></div></div>
+      <div class="rail" id="rail"></div>
+    </div>
+  </section>
+
+  <section class="block" style="padding-top:0">
+    <div class="wrap promos">
+      <a class="promo" href="#kits">
+        <img src="img/filing.jpg" alt="" loading="lazy">
+        <div class="cap c-butter"><h3>The audit season kit</h3><p>Files, dividers, foolscap and calculators in one tap.</p><span class="go">Add the kit</span></div>
+      </a>
+      <a class="promo" href="#shop" data-cat="gifts">
+        <img src="img/gifts.jpg" alt="" loading="lazy">
+        <div class="cap c-blush"><h3>Corporate gifting</h3><p>Leather journals, portfolios and pen sets, ready to wrap.</p><span class="go">Shop gifts</span></div>
+      </a>
+    </div>
+  </section>
+
+  <section class="block" id="kits" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-top"><h2>Office kits</h2><span class="note">One tap adds the whole list. Edit quantities in your quote list.</span></div>
+      <div class="kits" id="kitlist"></div>
+    </div>
+  </section>
+
+  <section class="block" id="shop" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-top"><h2 id="shop-title">Shop all</h2><span class="note" id="shop-count"></span></div>
+      <div class="chips" id="chips" role="group" aria-label="Filter by category"></div>
+      <div class="grid" id="grid"></div>
+      <p class="empty" id="empty" hidden>Nothing matches that yet. We carry 1,100+ lines, so <a href="https://wa.me/60122002685" target="_blank" rel="noopener">ask Shabeera on WhatsApp</a> and she'll check the shelf.</p>
+    </div>
+  </section>
+
+  <section class="block" id="meet" style="padding-top:0">
+    <div class="wrap">
+      <div class="feature c-lilac">
+        <div class="l">
+          <div class="avatar" aria-hidden="true">S</div>
+          <h2>a real person on the other end.</h2>
+          <p style="font-size:17px;max-width:40ch">Shabeera is our General Manager. Send your list the way you'd text a colleague. A photo of your last invoice works too.</p>
+          <p class="phone">012-200 2685</p>
+        </div>
+        <div class="r" aria-label="Example WhatsApp conversation">
+          <p class="chat-lbl">Example chat</p>
+          <div class="msg them">hi! need 10 ctn A4 80gsm, 20 arch files and 5 boxes blue pens. can deliver to Bangsar?<small>10:02</small></div>
+          <div class="msg us">Hi! Yes, we deliver to Bangsar. I'll send your quote within 2 working hours, side by side with your current prices.<small>10:04</small></div>
+          <div class="msg them">ok thanks, lifesaver<small>10:05</small></div>
+          <div class="msg us">Quote attached. Reply "confirm" and we'll arrange delivery.<small>11:31</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="visit" style="padding-top:0">
+    <div class="wrap visit">
+      <div class="vcard c-mint" style="color:#14142B">
+        <p style="font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.08em">Visit the shop</p>
+        <p class="addr">142 Jalan Sultan Abdul Samad, Brickfields, 50470 Kuala Lumpur</p>
+        <p>A short walk from KL Sentral. Browse the shelves or collect your order.</p>
+        <div><a class="pill" style="background:#14142B;color:#fff" href="https://www.google.com/maps/search/?api=1&amp;query=Rose+Paper+142+Jalan+Sultan+Abdul+Samad+Brickfields+Kuala+Lumpur" target="_blank" rel="noopener">Open in Google Maps</a></div>
+      </div>
+      <div class="vcard" style="background:var(--soft)">
+        <div class="crow"><div><small>Shabeera · mobile &amp; WhatsApp</small><span>012-200 2685</span></div><button class="copy" type="button" data-copy="012-200 2685">Copy</button></div>
+        <div class="crow"><div><small>Office</small><span>03-2274 2863</span></div><button class="copy" type="button" data-copy="03-2274 2863">Copy</button></div>
+        <div class="crow"><div><small>Office</small><span>03-2274 2173</span></div><button class="copy" type="button" data-copy="03-2274 2173">Copy</button></div>
+        <div class="crow"><div><small>Email</small><span>rpsgkl@gmail.com</span></div><button class="copy" type="button" data-copy="rpsgkl@gmail.com">Copy</button></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="brands" aria-label="Brands on our shelves"><span>Double A</span><span>PaperOne</span><span>IK Yellow</span><span>Faber-Castell</span><span>Stabilo</span><span>Artline</span><span>Pilot</span><span>Zebra</span><span>Uni</span><span>Canon</span><span>Casio</span><span>MAX</span><span>Kangaro</span><span>UHU</span><span>Abba</span></div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fcols">
+      <div class="join">
+        <h4>Stay stocked</h4>
+        <p>Get restock reminders and new arrivals on WhatsApp. No spam, just stationery.</p>
+        <div><a class="pill light" href="https://wa.me/60122002685?text=Hi%20Rose%20Paper%2C%20please%20add%20me%20to%20your%20updates%20list." target="_blank" rel="noopener"><svg class="ico"><use href="#i-chat"/></svg>Join on WhatsApp</a></div>
+      </div>
+      <div><h4>Shop</h4><ul>
+        <li><a href="#shop" data-cat="paper">Paper &amp; envelopes</a></li><li><a href="#shop" data-cat="filing">Filing</a></li><li><a href="#shop" data-cat="writing">Writing</a></li><li><a href="#shop" data-cat="desk">Desk</a></li><li><a href="#shop" data-cat="forms">Forms &amp; stamps</a></li><li><a href="#shop" data-cat="gifts">Gifts &amp; leather</a></li>
+      </ul></div>
+      <div><h4>Ordering</h4><ul>
+        <li><a href="#meet">How ordering works</a></li><li><a href="#kits">Office kits</a></li><li><a href="https://wa.me/60122002685?text=Hi%20Rose%20Paper%2C%20I%27d%20like%20to%20open%20a%20business%20account." target="_blank" rel="noopener">Open a business account</a></li><li><a href="https://wa.me/60122002685?text=Hi%20Rose%20Paper%2C%20I%27d%20like%20a%20quote%20for%20custom%20printed%20forms." target="_blank" rel="noopener">Custom printed forms</a></li>
+      </ul></div>
+      <div><h4>Visit</h4><ul>
+        <li><a href="#visit">142 Jalan Sultan Abdul Samad, Brickfields</a></li><li><a href="#visit">012-200 2685</a></li><li><a href="#visit">03-2274 2863</a></li><li><a href="#visit">rpsgkl@gmail.com</a></li>
+      </ul></div>
+    </div>
+    <span class="fbig"><svg viewBox="-40 20 4500 1030" role="img" aria-label="Rose Paper"><use href="#logo"/></svg></span>
+    <div class="flegal"><span>stationery for people with deadlines.</span><span>© 2026 Rose Paper Stationery and Gifts Sdn. Bhd. (RPSG) · 202201008829 (1454526-U). Brand names belong to their owners.</span></div>
+  </div>
+</footer>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="dtitle" aria-hidden="true">
+  <div class="dh"><h2 id="dtitle">Your quote list</h2><button type="button" id="close-bag" aria-label="Close quote list"><svg class="ico"><use href="#i-x"/></svg></button></div>
+  <div class="dbody">
+    <div id="lines"></div>
+    <p class="empty" id="bag-empty">Your list is empty. Add items or an office kit and they'll show up here.</p>
+    <form class="dform" id="qform" novalidate>
+      <div class="two">
+        <div class="field"><label for="q-name">Your name</label><input id="q-name" autocomplete="name" placeholder="Aisyah"></div>
+        <div class="field"><label for="q-co">Company</label><input id="q-co" autocomplete="organization" placeholder="Klinik Sejahtera"></div>
+      </div>
+      <div class="two">
+        <div class="field"><label for="q-area">Delivery area</label><input id="q-area" placeholder="Petaling Jaya"></div>
+        <div class="field"><label for="q-type">Business type</label><select id="q-type"><option>Office / SME</option><option>Clinic / healthcare</option><option>Law firm</option><option>Accounting / audit</option><option>Property management</option><option>School / tuition centre</option><option>Other</option></select></div>
+      </div>
+      <div class="field"><label for="q-notes">Notes, sizes or anything else</label><textarea id="q-notes" placeholder="Quantities are in reams for paper and boxes for pens"></textarea></div>
+    </form>
+  </div>
+  <div class="dfoot">
+    <p class="err" id="q-err" hidden>Add your company name and at least one item so we can quote.</p>
+    <button class="pill" type="submit" form="qform"><svg class="ico"><use href="#i-chat"/></svg>Send list on WhatsApp</button>
+    <p class="note">WhatsApp opens with your list ready to send to Shabeera. Nothing is stored on this site.</p>
+  </div>
+</aside>
+<div class="toast" id="toast" role="status"><span id="toast-msg">Added</span><button type="button" id="toast-view">View list</button></div>
+
+<script>
+(function(){
+  var WA='60122002685';
+  var CATS={paper:['Paper','c-lilac'],filing:['Filing','c-butter'],writing:['Writing','c-mint'],desk:['Desk','c-blush'],forms:['Forms & stamps','c-rose'],gifts:['Gifts & leather','c-ink'],school:['School & art','c-sky']};
+  var P=[
+    {id:'a4-80',cat:'paper',g:'A4',n:'A4 copier paper, 80 gsm',b:'Double A · PaperOne · IK Yellow',s:'500 sheets per ream',badge:'By the carton',staple:1},
+    {id:'a4-70',cat:'paper',g:'70',n:'A4 copier paper, 70 gsm',b:'PaperOne · IK Yellow',s:'Everyday printing',staple:0},
+    {id:'a3',cat:'paper',g:'A3',n:'A3 copier paper',b:'Copier paper',s:'70 and 80 gsm'},
+    {id:'colour',cat:'paper',g:'neon',n:'Colour and neon paper',b:'A4',s:'Notices, flyers and forms'},
+    {id:'env',cat:'paper',g:'✉',n:'White and manila envelopes',b:'Assorted sizes',s:'By the box'},
+    {id:'foolscap',cat:'paper',g:'F4',n:'Foolscap pads',b:'Ruled',s:'Audit working papers'},
+    {id:'lever',cat:'filing',g:'8+',n:'PVC lever arch files',b:'Abba · UEW · CBE · EMI',s:'8+ colours',staple:1},
+    {id:'div',cat:'filing',g:'A–Z',n:'Index dividers',b:'A–Z · Jan–Dec · 1–31',s:'For records and audit files',staple:1},
+    {id:'ring',cat:'filing',g:'O-O',n:'Ring and button files',b:'Assorted colours',s:'Light filing'},
+    {id:'mag',cat:'filing',g:'mag',n:'Magazine holders',b:'Shelf storage',s:'Keep files upright'},
+    {id:'box',cat:'filing',g:'box',n:'Box files',b:'Archive storage',s:'Records rooms'},
+    {id:'hi',cat:'writing',g:'hi!',n:'Highlighters',b:'Stabilo',s:'Assorted colours',staple:1},
+    {id:'pens',cat:'writing',g:'×box',n:'Ballpoint pens, by the box',b:'Pilot · Zebra · Uni',s:'Blue, black and red',badge:'By the box',staple:1},
+    {id:'perm',cat:'writing',g:'70',n:'Permanent markers',b:'Artline',s:'Labels, boxes and files'},
+    {id:'wb',cat:'writing',g:'wb',n:'Whiteboard markers',b:'Artline',s:'Meeting rooms'},
+    {id:'corr',cat:'writing',g:'oops',n:'Correction tape',b:'Assorted brands',s:'Clean fixes'},
+    {id:'stapler',cat:'desk',g:'clack',n:'Staplers and staples',b:'MAX · Kangaro',s:'Desk and heavy-duty',staple:1},
+    {id:'calc',cat:'desk',g:'=',n:'Calculators',b:'Canon · Casio',s:'Desk and printing',staple:1},
+    {id:'sticky',cat:'desk',g:'■■',n:'Sticky notes',b:'Assorted sizes',s:'Pastel and neon'},
+    {id:'tape',cat:'desk',g:'tape',n:'Tape and glue',b:'UHU',s:'Glue sticks and dispensers'},
+    {id:'punch',cat:'desk',g:'o o',n:'Hole punchers',b:'MAX · Kangaro',s:'2-hole punch'},
+    {id:'ncr',cat:'forms',g:'3‑ply',n:'NCR cash bill books',b:'2-ply and 3-ply',s:'Custom printing on request',badge:'Custom print',staple:1},
+    {id:'podo',cat:'forms',g:'PO',n:'PO and DO books',b:'Purchase and delivery orders',s:'2-ply and 3-ply'},
+    {id:'vouch',cat:'forms',g:'RM',n:'Payment and salary vouchers',b:'Voucher books',s:'For admin and HR'},
+    {id:'stamp',cat:'forms',g:'✓',n:'Self-inking stamps',b:'Artline Xstamper',s:'Plus pads and ink',badge:'Custom print'},
+    {id:'journal',cat:'gifts',g:'gift',n:'Leather journals',b:'Corporate gifts',s:'For clients and staff',badge:'Gift-ready'},
+    {id:'folio',cat:'gifts',g:'folio',n:'Document portfolios',b:'Leather',s:'Meetings and events'},
+    {id:'penset',cat:'gifts',g:'pen',n:'Pen gift sets',b:'Boxed',s:'Awards and thank-yous',badge:'Gift-ready'},
+    {id:'exbook',cat:'school',g:'abc',n:'Exercise books',b:'Schools and tuition centres',s:'Term-start bulk'},
+    {id:'colour-pen',cat:'school',g:'art',n:'Colour pencils and crayons',b:'Faber-Castell',s:'Art and craft'}
+  ];
+  var KITS=[
+    {id:'clinic',n:'The clinic kit',c:'c-mint',items:['a4-80','box','vouch','env','stamp']},
+    {id:'law',n:'The law firm kit',c:'c-lilac',items:['a4-80','lever','div','hi','stapler']},
+    {id:'audit',n:'The audit season kit',c:'c-butter',items:['foolscap','div','calc','lever','box']},
+    {id:'restock',n:'The office restock',c:'c-blush',items:['pens','sticky','stapler','tape','wb']}
+  ];
+  var byId={};P.forEach(function(p){byId[p.id]=p});
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+
+  /* bag */
+  var bag=[];
+  try{bag=JSON.parse(localStorage.getItem('rp-bag')||'[]')||[]}catch(_){bag=[]}
+  bag=bag.filter(function(l){return byId[l.id]&&l.q>0});
+  function save(){try{localStorage.setItem('rp-bag',JSON.stringify(bag))}catch(_){}}
+  function add(id,q){var l=bag.find(function(x){return x.id===id});if(l)l.q+=q||1;else bag.push({id:id,q:q||1});save();renderBag()}
+  function card(p){
+    var c=CATS[p.cat][1];
+    return '<article class="p" data-id="'+p.id+'"><div class="p-img '+c+'">'+(p.img?'<img src="'+p.img+'" alt="'+esc(p.n)+'" loading="lazy">':'<span class="p-glyph" aria-hidden="true">'+esc(p.g)+'</span>')+(p.badge?'<span class="p-badge">'+esc(p.badge)+'</span>':'')+'</div>'+
+      '<div class="p-body"><p class="p-brand">'+esc(p.b)+'</p><h3 class="p-name">'+esc(p.n)+'</h3><p class="p-spec">'+esc(p.s)+'</p><p class="p-price">Price on request</p></div>'+
+      '<button class="p-add" type="button" data-add="'+p.id+'"><svg class="ico" style="width:18px;height:18px"><use href="#i-plus"/></svg><span>Add to quote</span></button></article>';
+  }
+  document.getElementById('rail').innerHTML=P.filter(function(p){return p.staple}).map(card).join('');
+  document.getElementById('kitlist').innerHTML=KITS.map(function(k){
+    return '<div class="kit '+k.c+'"><h3>'+esc(k.n)+'</h3><ul>'+k.items.map(function(i){return '<li>'+esc(byId[i].n)+'</li>'}).join('')+'</ul><button class="pill" type="button" data-kit="'+k.id+'" style="background:#14142B;color:#fff">Add kit to quote</button></div>';
+  }).join('');
+
+  /* shop grid */
+  var cat='all', query='';
+  var chips=document.getElementById('chips');
+  chips.innerHTML=['all'].concat(Object.keys(CATS)).map(function(k){return '<button class="chip" type="button" data-chip="'+k+'" aria-pressed="'+(k==='all')+'">'+(k==='all'?'All':esc(CATS[k][0]))+'</button>'}).join('');
+  function renderGrid(){
+    var qs=query.toLowerCase().split(/\s+/).filter(Boolean);
+    var list=P.filter(function(p){
+      if(cat!=='all'&&p.cat!==cat)return false;
+      var hay=(p.n+' '+p.b+' '+p.s+' '+CATS[p.cat][0]).toLowerCase();
+      return qs.every(function(w){return hay.indexOf(w)>-1});
+    });
+    document.getElementById('grid').innerHTML=list.map(card).join('');
+    document.getElementById('empty').hidden=list.length>0;
+    document.getElementById('shop-title').textContent=query?'Results for “'+query+'”':(cat==='all'?'Shop all':CATS[cat][0]);
+    document.getElementById('shop-count').textContent=list.length+(list.length===1?' product':' products');
+    [].forEach.call(chips.children,function(b){b.setAttribute('aria-pressed',String(b.dataset.chip===cat))});
+    markAdded();
+  }
+  function setCat(c){cat=c;renderGrid()}
+  chips.addEventListener('click',function(e){var b=e.target.closest('[data-chip]');if(b){query='';document.getElementById('q').value='';setCat(b.dataset.chip)}});
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('[data-cat]');
+    if(a){query='';document.getElementById('q').value='';setCat(a.dataset.cat)}
+  });
+  var qInput=document.getElementById('q');
+  qInput.addEventListener('input',function(){query=qInput.value.trim();cat='all';renderGrid()});
+  document.getElementById('search').addEventListener('submit',function(e){e.preventDefault();query=qInput.value.trim();cat='all';renderGrid();document.getElementById('shop').scrollIntoView()});
+
+  /* add buttons */
+  var toast=document.getElementById('toast'),tmsg=document.getElementById('toast-msg'),tt;
+  function flash(msg){tmsg.textContent=msg;toast.classList.add('show');clearTimeout(tt);tt=setTimeout(function(){toast.classList.remove('show')},2600)}
+  document.addEventListener('click',function(e){
+    var b=e.target.closest('[data-add]');
+    if(b){add(b.dataset.add,1);flash('Added '+byId[b.dataset.add].n);return}
+    var k=e.target.closest('[data-kit]');
+    if(k){var kit=KITS.find(function(x){return x.id===k.dataset.kit});kit.items.forEach(function(i){add(i,1)});flash(kit.n+' added, 5 items')}
+  });
+  function markAdded(){
+    document.querySelectorAll('[data-add]').forEach(function(b){
+      var l=bag.find(function(x){return x.id===b.dataset.add});
+      b.classList.toggle('on',!!l);
+      b.querySelector('span').textContent=l?'In your list · '+l.q:'Add to quote';
+    });
+  }
+
+  /* drawer */
+  var drawer=document.getElementById('drawer'),scrim=document.getElementById('scrim'),lastFocus;
+  function openBag(){lastFocus=document.activeElement;drawer.classList.add('open');scrim.classList.add('open');drawer.setAttribute('aria-hidden','false');document.getElementById('close-bag').focus()}
+  function closeBag(){drawer.classList.remove('open');scrim.classList.remove('open');drawer.setAttribute('aria-hidden','true');if(lastFocus)lastFocus.focus()}
+  document.getElementById('open-bag').addEventListener('click',openBag);
+  document.getElementById('toast-view').addEventListener('click',function(){toast.classList.remove('show');openBag()});
+  document.getElementById('close-bag').addEventListener('click',closeBag);
+  scrim.addEventListener('click',closeBag);
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&drawer.classList.contains('open'))closeBag()});
+  function renderBag(){
+    var n=bag.reduce(function(s,l){return s+l.q},0), cnt=document.getElementById('bag-count');
+    cnt.hidden=n===0;cnt.textContent=n;
+    document.getElementById('bag-empty').hidden=bag.length>0;
+    document.getElementById('lines').innerHTML=bag.map(function(l){
+      var p=byId[l.id],c=CATS[p.cat][1];
+      return '<div class="line"><span class="sw '+c+'">'+(p.img?'<img src="'+p.img+'" alt="">':esc(p.g))+'</span><div><b>'+esc(p.n)+'</b><small>'+esc(p.b)+'</small><br><button class="rm" type="button" data-rm="'+l.id+'">Remove</button></div><div class="qty"><button type="button" data-dec="'+l.id+'" aria-label="Fewer">−</button><span>'+l.q+'</span><button type="button" data-inc="'+l.id+'" aria-label="More">+</button></div></div>';
+    }).join('');
+    markAdded();
+  }
+  document.getElementById('lines').addEventListener('click',function(e){
+    var t=e.target.closest('button');if(!t)return;
+    var id=t.dataset.inc||t.dataset.dec||t.dataset.rm, l=bag.find(function(x){return x.id===id});if(!l)return;
+    if(t.dataset.inc)l.q++;else if(t.dataset.dec)l.q--;else l.q=0;
+    bag=bag.filter(function(x){return x.q>0});save();renderBag();
+  });
+  var err=document.getElementById('q-err');
+  function v(id){return document.getElementById(id).value.trim()}
+  document.getElementById('q-co').addEventListener('input',function(){err.hidden=true});
+  document.getElementById('qform').addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!v('q-co')||(!bag.length&&!v('q-notes'))){err.hidden=false;return}
+    err.hidden=true;
+    var items=bag.map(function(l){return '- '+l.q+' × '+byId[l.id].n}).join('\n');
+    var msg='Hi Rose Paper, I would like a quote.\n\nName: '+(v('q-name')||'-')+'\nCompany: '+v('q-co')+'\nType: '+v('q-type')+'\nDelivery area: '+(v('q-area')||'-')+'\n\nItems:\n'+(items||'-')+(v('q-notes')?'\n\nNotes: '+v('q-notes'):'');
+    var a=document.createElement('a');a.href='https://wa.me/'+WA+'?text='+encodeURIComponent(msg);a.target='_blank';a.rel='noopener';document.body.appendChild(a);a.click();a.remove();
+  });
+
+  /* rail arrows */
+  var rail=document.getElementById('rail');
+  document.getElementById('rail-l').addEventListener('click',function(){rail.scrollBy({left:-rail.clientWidth*.8,behavior:'smooth'})});
+  document.getElementById('rail-r').addEventListener('click',function(){rail.scrollBy({left:rail.clientWidth*.8,behavior:'smooth'})});
+
+  /* hero carousel */
+  var slides=document.getElementById('slides'),dots=[].slice.call(document.querySelectorAll('.dot')),idx=0,timer=null,pp=document.getElementById('pp');
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var slideEls=[].slice.call(slides.children);
+  function go(i){idx=(i+dots.length)%dots.length;slides.style.transform='translateX('+(-slideEls[idx].offsetLeft)+'px)';dots.forEach(function(d,j){d.setAttribute('aria-current',String(j===idx))})}
+  function play(){stop();timer=setInterval(function(){go(idx+1)},6000);pp.setAttribute('aria-label','Pause slideshow');pp.innerHTML='<svg class="ico"><use href="#i-pause"/></svg>'}
+  function stop(){clearInterval(timer);timer=null;pp.setAttribute('aria-label','Play slideshow');pp.innerHTML='<svg class="ico"><use href="#i-play"/></svg>'}
+  dots.forEach(function(d,j){d.addEventListener('click',function(){go(j);stop()})});
+  pp.addEventListener('click',function(){timer?stop():play()});
+  window.addEventListener('resize',function(){go(idx)});
+  if(reduce)stop();else play();
+
+  /* announcements */
+  var ANN=['Build your list, send it on WhatsApp, get a quote within 2 working hours','1,100+ lines in stock at our Brickfields shop','Delivered across Kuala Lumpur and the Klang Valley','One monthly invoice for approved business accounts'],ai=0,am=document.getElementById('ann-msg');
+  function ann(d){ai=(ai+d+ANN.length)%ANN.length;am.style.opacity=0;setTimeout(function(){am.textContent=ANN[ai];am.style.opacity=1},reduce?0:250)}
+  document.getElementById('ann-prev').addEventListener('click',function(){ann(-1)});
+  document.getElementById('ann-next').addEventListener('click',function(){ann(1)});
+  if(!reduce)setInterval(function(){ann(1)},5000);
+
+  /* copy */
+  document.querySelectorAll('.copy').forEach(function(b){
+    b.addEventListener('click',function(){
+      var t=b.dataset.copy;function done(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy'},1500)}
+      try{navigator.clipboard.writeText(t).then(done,function(){sel(b)})}catch(_){sel(b)}
+    });
+  });
+  function sel(b){var s=b.parentElement.querySelector('span'),r=document.createRange();r.selectNodeContents(s);var w=getSelection();w.removeAllRanges();w.addRange(r)}
+
+  renderGrid();renderBag();
+})();
+</script>
+</body>
+</html>
