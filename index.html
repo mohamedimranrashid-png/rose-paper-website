@@ -3,23 +3,24 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Rose Paper · stationery for people with deadlines</title>
+<title>Rose Paper, stationery for people with deadlines</title>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="theme-color" content="#D9D2FF">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Rose Paper · stationery for people with deadlines">
+<meta property="og:title" content="Rose Paper, stationery for people with deadlines">
 <meta property="og:description" content="Paper, pens, files, forms and gifts for Klang Valley offices. Build your list and get a quote on WhatsApp within 2 working hours.">
 <meta property="og:image" content="og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="description" content="Rose Paper, Brickfields KL. Paper, pens, files, forms and gifts for Klang Valley offices. Build your list and get a quote on WhatsApp.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap">
 <style>
 :root{
   --bg:#FFFFFF; --soft:#FFF4F2; --ink:#14142B; --muted:#5E5C72; --line:#EFE3E4;
   --rose:#F0325A; --rose-deep:#D81E48; --rose-text:#C81F45;
-  --butter:#FFE27A; --lilac:#D9D2FF; --mint:#C4F0DA; --blush:#FFD3DC; --sky:#CFE6FF;
+  --butter:#FFE27A; --lilac:#D9D2FF; --mint:#C4F0DA; --blush:#FFD3DC;
   --pop-ink:#14142B; --btn:#14142B; --btn-fg:#FFFFFF; --field:#F6F2F2;
   --display:"Bricolage Grotesque","Arial Black",system-ui,sans-serif;
   --body:"Figtree",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
@@ -48,7 +49,7 @@ button{font:inherit;color:inherit}
 .wrap{max-width:1320px;margin:0 auto;padding-inline:clamp(16px,3vw,32px)}
 .ico{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;flex:none}
 .pill{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;padding:13px 26px;font:700 16px var(--body);text-decoration:none;border:0;cursor:pointer;background:var(--btn);color:var(--btn-fg);transition:transform .15s ease,opacity .15s ease}
-.pill:hover{transform:translateY(-1px)}
+.pill:hover{opacity:.88}
 .pill.light{background:#FFFFFF;color:#14142B}
 .pill.rose{background:var(--rose-deep);color:#FFFFFF}
 .block{padding-block:clamp(40px,5vw,64px)}
@@ -106,14 +107,23 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:va
 .slide .img{position:relative;overflow:hidden}
 .slide .img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .slide.ink .panel{background:#14142B;color:#FFF6F4}
-.hl{background:linear-gradient(transparent 58%,var(--butter) 58%,var(--butter) 92%,transparent 92%)}
+.hl{background:linear-gradient(transparent 58%,var(--butter) 58%,var(--butter) 92%,transparent 92%) no-repeat 0 0/100% 100%}
+.slide:first-child .hl{animation:swipe .9s cubic-bezier(.6,0,.2,1) .35s both}
+@keyframes swipe{from{background-size:0 100%}}
+.brand .face-eye{animation:blink .45s ease 1.4s}
+.count.pop{animation:pop .35s ease}
+@keyframes pop{50%{transform:scale(1.45)}}
+.skip{position:absolute;left:12px;top:-60px;z-index:60;background:#14142B;color:#fff;padding:10px 16px;border-radius:999px;font-weight:700;text-decoration:none}
+.skip:focus{top:12px}
 .hero-ctrl{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);display:flex;gap:10px;align-items:center;background:#FFFFFF;border-radius:999px;padding:6px 6px 6px 14px;box-shadow:0 2px 10px rgba(20,20,43,.15)}
 .dot{width:10px;height:10px;border-radius:999px;border:0;background:rgba(20,20,43,.3);cursor:pointer;padding:0;transition:width .3s ease,background .3s ease}
 .dot[aria-current="true"]{width:30px;background:#14142B}
 .hero-ctrl .pp{width:30px;height:30px;border-radius:50%;border:0;background:#14142B;color:#FFFFFF;display:grid;place-items:center;cursor:pointer;margin-left:4px}
 .hero-ctrl .pp .ico{width:16px;height:16px}
 @media (max-width:760px){
-  .slide{grid-template-columns:1fr;grid-template-rows:auto 260px}
+  .slide{grid-template-columns:1fr;grid-template-rows:auto 220px}
+  .slide .panel{padding:28px 20px 30px;gap:16px}
+  .slide .panel p{font-size:16px}
   .slide .img{grid-row:2}
   .hero-ctrl{bottom:auto;top:12px;left:auto;right:16px;transform:none}
 }
@@ -132,7 +142,7 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:va
 .cats{display:grid;grid-template-columns:repeat(8,1fr);gap:16px}
 .cat{display:grid;gap:10px;justify-items:center;text-align:center;text-decoration:none;font-weight:700;font-size:15px;cursor:pointer;background:none;border:0;padding:0}
 .cat .circ{width:100%;aspect-ratio:1;border-radius:50%;overflow:hidden;display:grid;place-items:center;transition:transform .2s ease;position:relative;max-width:150px}
-.cat:hover .circ{transform:scale(1.04)}
+.cat:hover{color:var(--rose-text)}
 .cat .circ img{width:100%;height:100%;object-fit:cover}
 .cat .circ .g{font:800 clamp(24px,3vw,38px)/1 var(--display);letter-spacing:-.04em;color:#14142B}
 @media (max-width:980px){.cats{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:120px;overflow-x:auto;padding-bottom:8px;scrollbar-width:thin}}
@@ -148,11 +158,16 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:va
 .arrows button{width:40px;height:40px;border-radius:50%;border:1.5px solid var(--ink);background:var(--bg);cursor:pointer;display:grid;place-items:center}
 .arrows button .ico{width:18px;height:18px}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,230px),1fr));gap:28px 20px}
+@media (max-width:600px){.grid{grid-template-columns:1fr 1fr;gap:22px 12px}.p-name{font-size:15px}.p-spec{display:none}.p-add{padding:9px 8px;font-size:14px}.p-img{border-radius:14px}.p-badge{font-size:11px;top:8px;left:8px}}
+.more{display:flex;justify-content:center;margin-top:30px}
+.mbar{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:25;display:none;align-items:center;justify-content:space-between;gap:12px;background:#14142B;color:#FFF6F4;border-radius:999px;padding:8px 8px 8px 20px;font-weight:700;box-shadow:0 6px 24px rgba(20,20,43,.3);border:0;cursor:pointer;font-size:15px}
+.mbar b{background:var(--butter);color:#14142B;border-radius:999px;padding:9px 16px}
+@media (max-width:760px){.mbar.show{display:flex}.toast{bottom:calc(84px + env(safe-area-inset-bottom,0px));max-width:calc(100% - 32px);font-size:14px}.toast button{display:none}}
 .p{display:flex;flex-direction:column;gap:12px;min-width:0}
 .p-img{position:relative;aspect-ratio:1;border-radius:18px;overflow:hidden;display:grid;place-items:center;color:#14142B}
 .p-img img{width:100%;height:100%;object-fit:cover}
 .p-glyph{font:800 clamp(48px,6vw,76px)/.9 var(--display);letter-spacing:-.05em;text-align:center;padding:0 12px;transition:transform .3s ease}
-.p:hover .p-glyph{transform:scale(1.06) rotate(-2deg)}
+
 .p-badge{position:absolute;top:12px;left:12px;background:#FFFFFF;color:#14142B;font:700 12px var(--body);padding:5px 10px;border-radius:999px}
 .p-body{display:grid;gap:3px}
 .p-brand{font-size:13px;color:var(--muted);font-weight:600}
@@ -162,14 +177,14 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:va
 .p-add{margin-top:auto;width:100%;border-radius:999px;border:1.5px solid var(--ink);background:transparent;padding:11px 14px;font-weight:700;font-size:15px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:background .15s ease,color .15s ease}
 .p-add:hover{background:var(--btn);color:var(--btn-fg)}
 .p-add.on{background:var(--btn);color:var(--btn-fg)}
-.c-lilac{background:var(--lilac)}.c-butter{background:var(--butter)}.c-mint{background:var(--mint)}.c-blush{background:var(--blush)}.c-sky{background:var(--sky)}
+.c-lilac{background:var(--lilac)}.c-butter{background:var(--butter)}.c-mint{background:var(--mint)}.c-blush{background:var(--blush)}
 .c-rose{background:var(--rose-deep);color:#FFFFFF}.c-ink{background:#14142B;color:#FFF6F4}
 
 /* promos */
 .promos{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .promo{position:relative;border-radius:24px;overflow:hidden;min-height:400px;display:grid;grid-template-rows:1fr auto;text-decoration:none;color:#14142B}
 .promo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
-.promo:hover img{transform:scale(1.03)}
+
 .promo .cap{position:relative;grid-row:2;margin:18px;padding:22px 24px;border-radius:18px;display:grid;gap:8px;max-width:420px}
 .promo h3{font-size:clamp(28px,3vw,38px)}
 .promo .go{font-weight:700;text-decoration:underline;text-underline-offset:4px}
@@ -203,7 +218,7 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:va
 .msg small{display:block;font-size:11px;opacity:.6;margin-top:3px;text-align:right}
 .msg.them{background:#FFFFFF;justify-self:start;border-bottom-left-radius:6px}
 .msg.us{background:var(--butter);justify-self:end;border-bottom-right-radius:6px}
-.chat-lbl{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#4B3FB0}
+.chat-lbl{font-size:14px;font-weight:700;color:#4B3FB0}
 @media (max-width:860px){.feature{grid-template-columns:1fr}}
 .visit{display:grid;grid-template-columns:1.2fr 1fr;gap:20px}
 .vcard{border-radius:24px;padding:clamp(24px,3vw,36px);display:grid;gap:14px;align-content:start}
@@ -219,7 +234,7 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:va
 /* footer */
 footer{background:#14142B;color:#FFF6F4;margin-top:clamp(40px,5vw,64px)}
 .fcols{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:32px;padding-block:56px 36px}
-.fcols h4{margin:0 0 14px;font:700 13px var(--body);text-transform:uppercase;letter-spacing:.1em;color:var(--butter)}
+.fcols h4{margin:0 0 14px;font:800 20px var(--display);letter-spacing:-.01em;color:var(--butter)}
 .fcols ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
 .fcols a{text-decoration:none;color:#E6E2F2}
 .fcols a:hover{color:#FFFFFF;text-decoration:underline}
@@ -266,6 +281,7 @@ footer{background:#14142B;color:#FFF6F4;margin-top:clamp(40px,5vw,64px)}
 </style>
 </head>
 <body>
+<a class="skip" href="#top">Skip to content</a>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
     <symbol id="logo" viewBox="-40 20 4500 1030"><path d="M36.0 820.0V533.0V292.0H176.0V502.0H184.0Q190.0 418.0 207.5 369.5Q225.0 321.0 251.5 300.5Q278.0 280.0 311.0 280.0Q329.0 280.0 348.5 285.0Q368.0 290.0 387.0 301.0L379.0 481.0Q357.0 468.0 336.0 461.5Q315.0 455.0 296.0 455.0Q264.0 455.0 242.0 473.0Q220.0 491.0 208.5 526.0Q197.0 561.0 197.0 611.0V820.0ZM1138.0 834.0Q1085.0 834.0 1039.5 823.5Q994.0 813.0 960.5 790.0Q927.0 767.0 909.5 728.5Q892.0 690.0 895.0 635.0L1036.0 623.0Q1038.0 656.0 1051.0 677.5Q1064.0 699.0 1087.0 709.0Q1110.0 719.0 1143.0 719.0Q1174.0 719.0 1196.5 708.5Q1219.0 698.0 1219.0 673.0Q1219.0 660.0 1211.0 651.5Q1203.0 643.0 1181.5 635.5Q1160.0 628.0 1119.0 618.0Q1068.0 605.0 1027.0 592.0Q986.0 579.0 957.0 561.0Q928.0 543.0 913.0 516.5Q898.0 490.0 898.0 451.0Q898.0 396.0 927.5 357.5Q957.0 319.0 1009.0 298.5Q1061.0 278.0 1129.0 278.0Q1190.0 278.0 1243.0 297.0Q1296.0 316.0 1326.5 359.0Q1357.0 402.0 1349.0 473.0L1211.0 486.0Q1214.0 457.0 1203.0 436.5Q1192.0 416.0 1171.0 405.5Q1150.0 395.0 1120.0 395.0Q1086.0 395.0 1067.5 407.5Q1049.0 420.0 1049.0 439.0Q1049.0 454.0 1060.5 464.5Q1072.0 475.0 1096.5 482.5Q1121.0 490.0 1160.0 499.0Q1194.0 506.0 1231.0 517.0Q1268.0 528.0 1300.0 546.5Q1332.0 565.0 1352.0 595.0Q1372.0 625.0 1372.0 671.0Q1372.0 720.0 1345.0 757.0Q1318.0 794.0 1266.0 814.0Q1214.0 834.0 1138.0 834.0ZM1627.0 834.0Q1552.0 834.0 1501.5 812.5Q1451.0 791.0 1420.0 753.5Q1389.0 716.0 1375.5 668.0Q1362.0 620.0 1362.0 567.0Q1362.0 510.0 1376.5 458.0Q1391.0 406.0 1421.5 365.5Q1452.0 325.0 1500.5 301.5Q1549.0 278.0 1617.0 278.0Q1685.0 278.0 1733.5 301.5Q1782.0 325.0 1811.0 367.0Q1840.0 409.0 1848.5 464.0Q1857.0 519.0 1846.0 583.0L1463.0 589.0V501.0L1722.0 496.0L1701.0 547.0Q1707.0 501.0 1699.5 469.5Q1692.0 438.0 1672.0 421.5Q1652.0 405.0 1617.0 405.0Q1580.0 405.0 1558.0 424.0Q1536.0 443.0 1527.0 477.5Q1518.0 512.0 1518.0 559.0Q1518.0 640.0 1545.0 677.0Q1572.0 714.0 1628.0 714.0Q1652.0 714.0 1668.0 708.0Q1684.0 702.0 1694.0 690.5Q1704.0 679.0 1708.0 662.5Q1712.0 646.0 1711.0 625.0L1859.0 633.0Q1862.0 666.0 1852.5 701.0Q1843.0 736.0 1817.0 766.0Q1791.0 796.0 1744.5 815.0Q1698.0 834.0 1627.0 834.0ZM2020.0 968.0V480.0V292.0H2162.0V455.0H2169.0Q2180.0 396.0 2202.0 356.5Q2224.0 317.0 2258.5 297.5Q2293.0 278.0 2342.0 278.0Q2404.0 278.0 2447.5 309.5Q2491.0 341.0 2513.5 402.5Q2536.0 464.0 2536.0 554.0Q2536.0 651.0 2510.5 713.0Q2485.0 775.0 2441.0 804.5Q2397.0 834.0 2341.0 834.0Q2296.0 834.0 2261.5 815.0Q2227.0 796.0 2204.5 756.5Q2182.0 717.0 2173.0 657.0H2164.0Q2169.0 686.0 2173.0 717.5Q2177.0 749.0 2179.5 779.5Q2182.0 810.0 2182.0 838.0V968.0ZM2280.0 701.0Q2312.0 701.0 2332.5 681.0Q2353.0 661.0 2362.5 628.5Q2372.0 596.0 2372.0 560.0Q2372.0 520.0 2361.5 487.5Q2351.0 455.0 2330.5 435.5Q2310.0 416.0 2280.0 416.0Q2261.0 416.0 2243.0 424.5Q2225.0 433.0 2211.0 450.5Q2197.0 468.0 2188.5 495.0Q2180.0 522.0 2180.0 560.0V566.0Q2180.0 596.0 2186.0 618.0Q2192.0 640.0 2202.0 656.0Q2212.0 672.0 2225.0 682.0Q2238.0 692.0 2252.0 696.5Q2266.0 701.0 2280.0 701.0ZM2685.0 834.0Q2645.0 834.0 2609.0 820.0Q2573.0 806.0 2550.0 774.5Q2527.0 743.0 2527.0 690.0Q2527.0 641.0 2546.0 610.5Q2565.0 580.0 2597.0 561.5Q2629.0 543.0 2667.0 533.5Q2705.0 524.0 2742.0 517.0Q2794.0 507.0 2820.0 501.0Q2846.0 495.0 2855.5 487.0Q2865.0 479.0 2865.0 465.0Q2865.0 436.0 2843.5 421.0Q2822.0 406.0 2787.0 406.0Q2765.0 406.0 2743.0 414.0Q2721.0 422.0 2707.0 442.5Q2693.0 463.0 2694.0 501.0L2550.0 491.0Q2548.0 428.0 2569.0 386.5Q2590.0 345.0 2626.5 321.5Q2663.0 298.0 2706.5 288.0Q2750.0 278.0 2793.0 278.0Q2872.0 278.0 2923.0 307.5Q2974.0 337.0 2998.5 392.5Q3023.0 448.0 3023.0 527.0V621.0Q3023.0 654.0 3023.0 687.5Q3023.0 721.0 3023.0 754.0Q3023.0 787.0 3023.0 820.0H2883.0Q2883.0 784.0 2883.0 747.0Q2883.0 710.0 2883.0 669.0H2877.0Q2873.0 714.0 2847.5 751.5Q2822.0 789.0 2780.5 811.5Q2739.0 834.0 2685.0 834.0ZM2752.0 716.0Q2769.0 716.0 2788.5 709.5Q2808.0 703.0 2825.5 688.0Q2843.0 673.0 2854.0 646.5Q2865.0 620.0 2865.0 581.0V557.0L2892.0 554.0Q2884.0 567.0 2865.5 575.0Q2847.0 583.0 2824.0 587.5Q2801.0 592.0 2777.5 596.5Q2754.0 601.0 2734.0 608.5Q2714.0 616.0 2701.5 628.5Q2689.0 641.0 2689.0 663.0Q2689.0 689.0 2707.5 702.5Q2726.0 716.0 2752.0 716.0ZM3041.0 968.0V480.0V292.0H3183.0V455.0H3190.0Q3201.0 396.0 3223.0 356.5Q3245.0 317.0 3279.5 297.5Q3314.0 278.0 3363.0 278.0Q3425.0 278.0 3468.5 309.5Q3512.0 341.0 3534.5 402.5Q3557.0 464.0 3557.0 554.0Q3557.0 651.0 3531.5 713.0Q3506.0 775.0 3462.0 804.5Q3418.0 834.0 3362.0 834.0Q3317.0 834.0 3282.5 815.0Q3248.0 796.0 3225.5 756.5Q3203.0 717.0 3194.0 657.0H3185.0Q3190.0 686.0 3194.0 717.5Q3198.0 749.0 3200.5 779.5Q3203.0 810.0 3203.0 838.0V968.0ZM3301.0 701.0Q3333.0 701.0 3353.5 681.0Q3374.0 661.0 3383.5 628.5Q3393.0 596.0 3393.0 560.0Q3393.0 520.0 3382.5 487.5Q3372.0 455.0 3351.5 435.5Q3331.0 416.0 3301.0 416.0Q3282.0 416.0 3264.0 424.5Q3246.0 433.0 3232.0 450.5Q3218.0 468.0 3209.5 495.0Q3201.0 522.0 3201.0 560.0V566.0Q3201.0 596.0 3207.0 618.0Q3213.0 640.0 3223.0 656.0Q3233.0 672.0 3246.0 682.0Q3259.0 692.0 3273.0 696.5Q3287.0 701.0 3301.0 701.0ZM3818.0 834.0Q3743.0 834.0 3692.5 812.5Q3642.0 791.0 3611.0 753.5Q3580.0 716.0 3566.5 668.0Q3553.0 620.0 3553.0 567.0Q3553.0 510.0 3567.5 458.0Q3582.0 406.0 3612.5 365.5Q3643.0 325.0 3691.5 301.5Q3740.0 278.0 3808.0 278.0Q3876.0 278.0 3924.5 301.5Q3973.0 325.0 4002.0 367.0Q4031.0 409.0 4039.5 464.0Q4048.0 519.0 4037.0 583.0L3654.0 589.0V501.0L3913.0 496.0L3892.0 547.0Q3898.0 501.0 3890.5 469.5Q3883.0 438.0 3863.0 421.5Q3843.0 405.0 3808.0 405.0Q3771.0 405.0 3749.0 424.0Q3727.0 443.0 3718.0 477.5Q3709.0 512.0 3709.0 559.0Q3709.0 640.0 3736.0 677.0Q3763.0 714.0 3819.0 714.0Q3843.0 714.0 3859.0 708.0Q3875.0 702.0 3885.0 690.5Q3895.0 679.0 3899.0 662.5Q3903.0 646.0 3902.0 625.0L4050.0 633.0Q4053.0 666.0 4043.5 701.0Q4034.0 736.0 4008.0 766.0Q3982.0 796.0 3935.5 815.0Q3889.0 834.0 3818.0 834.0ZM4056.0 820.0V533.0V292.0H4196.0V502.0H4204.0Q4210.0 418.0 4227.5 369.5Q4245.0 321.0 4271.5 300.5Q4298.0 280.0 4331.0 280.0Q4349.0 280.0 4368.5 285.0Q4388.0 290.0 4407.0 301.0L4399.0 481.0Q4377.0 468.0 4356.0 461.5Q4335.0 455.0 4316.0 455.0Q4284.0 455.0 4262.0 473.0Q4240.0 491.0 4228.5 526.0Q4217.0 561.0 4217.0 611.0V820.0Z" fill="currentColor"/><circle cx="635.5" cy="556.0" r="294.7" fill="#F0325A"/><circle class="face-eye" cx="542.4" cy="494.0" r="41.9" fill="#14142B"/><circle class="face-eye" cx="728.6" cy="494.0" r="41.9" fill="#14142B"/><path d="M511.4 602.5 Q635.5 734.4 759.6 602.5" fill="none" stroke="#14142B" stroke-width="49.6" stroke-linecap="round"/></symbol>
@@ -369,13 +385,13 @@ footer{background:#14142B;color:#FFF6F4;margin-top:clamp(40px,5vw,64px)}
     <div class="wrap">
       <div class="sec-top"><h2>Shop by category</h2></div>
       <div class="cats">
-        <a class="cat" href="#shop" data-cat="paper"><span class="circ c-lilac"><span class="g">A4</span></span>Paper</a>
-        <a class="cat" href="#shop" data-cat="filing"><span class="circ c-butter"><img src="img/filing.jpg" alt="" loading="lazy"></span>Filing</a>
+        <a class="cat" href="#shop" data-cat="paper"><span class="circ c-lilac"><img src="img/products/a4-80.jpg" alt="" loading="lazy" decoding="async"></span>Paper</a>
+        <a class="cat" href="#shop" data-cat="filing"><span class="circ c-butter"><img src="img/products/lever.jpg" alt="" loading="lazy" decoding="async"></span>Filing</a>
         <a class="cat" href="#shop" data-cat="writing"><span class="circ c-mint"><img src="img/pens.jpg" alt="" loading="lazy"></span>Writing</a>
         <a class="cat" href="#shop" data-cat="desk"><span class="circ c-blush"><img src="img/desk.jpg" alt="" loading="lazy"></span>Desk</a>
         <a class="cat" href="#shop" data-cat="forms"><span class="circ c-rose"><span class="g" style="color:#fff">3‑ply</span></span>Forms &amp; stamps</a>
         <a class="cat" href="#shop" data-cat="gifts"><span class="circ c-ink"><img src="img/gifts.jpg" alt="" loading="lazy"></span>Gifts</a>
-        <a class="cat" href="#shop" data-cat="school"><span class="circ c-sky"><span class="g">abc</span></span>School &amp; art</a>
+        <a class="cat" href="#shop" data-cat="school"><span class="circ c-mint"><span class="g">abc</span></span>School &amp; art</a>
         <a class="cat" href="#kits"><span class="circ c-butter"><svg viewBox="0 0 100 100" width="62%" aria-hidden="true"><circle cx="50" cy="50" r="46" fill="#F0325A"/><circle cx="36" cy="40" r="6.5" fill="#14142B"/><circle cx="64" cy="40" r="6.5" fill="#14142B"/><path d="M30 58 Q50 78 70 58" fill="none" stroke="#14142B" stroke-width="7.5" stroke-linecap="round"/></svg></span>Office kits</a>
       </div>
     </div>
@@ -413,6 +429,7 @@ footer{background:#14142B;color:#FFF6F4;margin-top:clamp(40px,5vw,64px)}
       <div class="sec-top"><h2 id="shop-title">Shop all</h2><span class="note" id="shop-count"></span></div>
       <div class="chips" id="chips" role="group" aria-label="Filter by category"></div>
       <div class="grid" id="grid"></div>
+      <div class="more" id="more-wrap" hidden><button class="pill" type="button" id="more">Show all products</button></div>
       <p class="empty" id="empty" hidden>Nothing matches that yet. We carry 1,100+ lines, so <a href="https://wa.me/60122002685" target="_blank" rel="noopener">ask Shabeera on WhatsApp</a> and she'll check the shelf.</p>
     </div>
   </section>
@@ -440,13 +457,13 @@ footer{background:#14142B;color:#FFF6F4;margin-top:clamp(40px,5vw,64px)}
   <section class="block" id="visit" style="padding-top:0">
     <div class="wrap visit">
       <div class="vcard c-mint" style="color:#14142B">
-        <p style="font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.08em">Visit the shop</p>
+        <p style="font-weight:700;font-size:15px">Visit the shop</p>
         <p class="addr">142 Jalan Sultan Abdul Samad, Brickfields, 50470 Kuala Lumpur</p>
         <p>A short walk from KL Sentral. Browse the shelves or collect your order.</p>
         <div><a class="pill" style="background:#14142B;color:#fff" href="https://www.google.com/maps/search/?api=1&amp;query=Rose+Paper+142+Jalan+Sultan+Abdul+Samad+Brickfields+Kuala+Lumpur" target="_blank" rel="noopener">Open in Google Maps</a></div>
       </div>
       <div class="vcard" style="background:var(--soft)">
-        <div class="crow"><div><small>Shabeera · mobile &amp; WhatsApp</small><span>012-200 2685</span></div><button class="copy" type="button" data-copy="012-200 2685">Copy</button></div>
+        <div class="crow"><div><small>Shabeera, mobile and WhatsApp</small><span>012-200 2685</span></div><button class="copy" type="button" data-copy="012-200 2685">Copy</button></div>
         <div class="crow"><div><small>Office</small><span>03-2274 2863</span></div><button class="copy" type="button" data-copy="03-2274 2863">Copy</button></div>
         <div class="crow"><div><small>Office</small><span>03-2274 2173</span></div><button class="copy" type="button" data-copy="03-2274 2173">Copy</button></div>
         <div class="crow"><div><small>Email</small><span>rpsgkl@gmail.com</span></div><button class="copy" type="button" data-copy="rpsgkl@gmail.com">Copy</button></div>
@@ -478,7 +495,7 @@ footer{background:#14142B;color:#FFF6F4;margin-top:clamp(40px,5vw,64px)}
       </ul></div>
     </div>
     <span class="fbig"><svg viewBox="-40 20 4500 1030" role="img" aria-label="Rose Paper"><use href="#logo"/></svg></span>
-    <div class="flegal"><span>stationery for people with deadlines.</span><span>© 2026 Rose Paper Stationery and Gifts Sdn. Bhd. (RPSG) · 202201008829 (1454526-U). Brand names belong to their owners.</span></div>
+    <div class="flegal"><span>stationery for people with deadlines.</span><span>© 2026 Rose Paper Stationery and Gifts Sdn. Bhd. (RPSG), 202201008829 (1454526-U). Brand names belong to their owners.</span></div>
   </div>
 </footer>
 
@@ -506,34 +523,35 @@ footer{background:#14142B;color:#FFF6F4;margin-top:clamp(40px,5vw,64px)}
     <p class="note">WhatsApp opens with your list ready to send to Shabeera. Nothing is stored on this site.</p>
   </div>
 </aside>
+<button class="mbar" type="button" id="mbar"><span id="mbar-n">0 items in your quote list</span><b>View list</b></button>
 <div class="toast" id="toast" role="status"><span id="toast-msg">Added</span><button type="button" id="toast-view">View list</button></div>
 
 <script>
 (function(){
   var WA='60122002685';
-  var CATS={paper:['Paper','c-lilac'],filing:['Filing','c-butter'],writing:['Writing','c-mint'],desk:['Desk','c-blush'],forms:['Forms & stamps','c-rose'],gifts:['Gifts & leather','c-ink'],school:['School & art','c-sky']};
+  var CATS={paper:['Paper','c-lilac'],filing:['Filing','c-butter'],writing:['Writing','c-mint'],desk:['Desk','c-blush'],forms:['Forms & stamps','c-rose'],gifts:['Gifts & leather','c-ink'],school:['School & art','c-butter']};
   var P=[
-    {id:'a4-80',cat:'paper',g:'A4',n:'A4 copier paper, 80 gsm',b:'Double A · PaperOne · IK Yellow',s:'500 sheets per ream',badge:'By the carton',staple:1},
-    {id:'a4-70',cat:'paper',g:'70',n:'A4 copier paper, 70 gsm',b:'PaperOne · IK Yellow',s:'Everyday printing',staple:0},
-    {id:'a3',cat:'paper',g:'A3',n:'A3 copier paper',b:'Copier paper',s:'70 and 80 gsm'},
+    {id:'a4-80',img:'img/products/a4-80.jpg',cat:'paper',g:'A4',n:'A4 copier paper, 80 gsm',b:'Double A, PaperOne, IK Yellow',s:'500 sheets per ream',badge:'By the carton',staple:1},
+    {id:'a4-70',img:'img/products/a4-70.jpg',cat:'paper',g:'70',n:'A4 copier paper, 70 gsm',b:'PaperOne, IK Yellow',s:'Everyday printing',staple:0},
+    {id:'a3',img:'img/products/a3.jpg',cat:'paper',g:'A3',n:'A3 copier paper',b:'Copier paper',s:'70 and 80 gsm'},
     {id:'colour',cat:'paper',g:'neon',n:'Colour and neon paper',b:'A4',s:'Notices, flyers and forms'},
     {id:'env',cat:'paper',g:'✉',n:'White and manila envelopes',b:'Assorted sizes',s:'By the box'},
     {id:'foolscap',cat:'paper',g:'F4',n:'Foolscap pads',b:'Ruled',s:'Audit working papers'},
-    {id:'lever',cat:'filing',g:'8+',n:'PVC lever arch files',b:'Abba · UEW · CBE · EMI',s:'8+ colours',staple:1},
-    {id:'div',cat:'filing',g:'A–Z',n:'Index dividers',b:'A–Z · Jan–Dec · 1–31',s:'For records and audit files',staple:1},
+    {id:'lever',img:'img/products/lever.jpg',cat:'filing',g:'8+',n:'PVC lever arch files',b:'Abba, UEW, CBE, EMI',s:'8+ colours',staple:1},
+    {id:'div',cat:'filing',g:'A–Z',n:'Index dividers',b:'A–Z, Jan–Dec, 1–31',s:'For records and audit files',staple:1},
     {id:'ring',cat:'filing',g:'O-O',n:'Ring and button files',b:'Assorted colours',s:'Light filing'},
     {id:'mag',cat:'filing',g:'mag',n:'Magazine holders',b:'Shelf storage',s:'Keep files upright'},
-    {id:'box',cat:'filing',g:'box',n:'Box files',b:'Archive storage',s:'Records rooms'},
+    {id:'box',img:'img/products/box.jpg',cat:'filing',g:'box',n:'Box files',b:'Archive storage',s:'Records rooms'},
     {id:'hi',cat:'writing',g:'hi!',n:'Highlighters',b:'Stabilo',s:'Assorted colours',staple:1},
-    {id:'pens',cat:'writing',g:'×box',n:'Ballpoint pens, by the box',b:'Pilot · Zebra · Uni',s:'Blue, black and red',badge:'By the box',staple:1},
+    {id:'pens',cat:'writing',g:'×box',n:'Ballpoint pens, by the box',b:'Pilot, Zebra, Uni',s:'Blue, black and red',badge:'By the box',staple:1},
     {id:'perm',cat:'writing',g:'70',n:'Permanent markers',b:'Artline',s:'Labels, boxes and files'},
     {id:'wb',cat:'writing',g:'wb',n:'Whiteboard markers',b:'Artline',s:'Meeting rooms'},
     {id:'corr',cat:'writing',g:'oops',n:'Correction tape',b:'Assorted brands',s:'Clean fixes'},
-    {id:'stapler',cat:'desk',g:'clack',n:'Staplers and staples',b:'MAX · Kangaro',s:'Desk and heavy-duty',staple:1},
-    {id:'calc',cat:'desk',g:'=',n:'Calculators',b:'Canon · Casio',s:'Desk and printing',staple:1},
+    {id:'stapler',cat:'desk',g:'clack',n:'Staplers and staples',b:'MAX, Kangaro',s:'Desk and heavy-duty',staple:1},
+    {id:'calc',cat:'desk',g:'=',n:'Calculators',b:'Canon, Casio',s:'Desk and printing',staple:1},
     {id:'sticky',cat:'desk',g:'■■',n:'Sticky notes',b:'Assorted sizes',s:'Pastel and neon'},
     {id:'tape',cat:'desk',g:'tape',n:'Tape and glue',b:'UHU',s:'Glue sticks and dispensers'},
-    {id:'punch',cat:'desk',g:'o o',n:'Hole punchers',b:'MAX · Kangaro',s:'2-hole punch'},
+    {id:'punch',cat:'desk',g:'o o',n:'Hole punchers',b:'MAX, Kangaro',s:'2-hole punch'},
     {id:'ncr',cat:'forms',g:'3‑ply',n:'NCR cash bill books',b:'2-ply and 3-ply',s:'Custom printing on request',badge:'Custom print',staple:1},
     {id:'podo',cat:'forms',g:'PO',n:'PO and DO books',b:'Purchase and delivery orders',s:'2-ply and 3-ply'},
     {id:'vouch',cat:'forms',g:'RM',n:'Payment and salary vouchers',b:'Voucher books',s:'For admin and HR'},
@@ -561,7 +579,7 @@ footer{background:#14142B;color:#FFF6F4;margin-top:clamp(40px,5vw,64px)}
   function add(id,q){var l=bag.find(function(x){return x.id===id});if(l)l.q+=q||1;else bag.push({id:id,q:q||1});save();renderBag()}
   function card(p){
     var c=CATS[p.cat][1];
-    return '<article class="p" data-id="'+p.id+'"><div class="p-img '+c+'">'+(p.img?'<img src="'+p.img+'" alt="'+esc(p.n)+'" loading="lazy">':'<span class="p-glyph" aria-hidden="true">'+esc(p.g)+'</span>')+(p.badge?'<span class="p-badge">'+esc(p.badge)+'</span>':'')+'</div>'+
+    return '<article class="p" data-id="'+p.id+'"><div class="p-img '+c+'">'+(p.img?'<img src="'+p.img+'" alt="'+esc(p.n)+'" loading="lazy" decoding="async" width="800" height="800">':'<span class="p-glyph" aria-hidden="true">'+esc(p.g)+'</span>')+(p.badge?'<span class="p-badge">'+esc(p.badge)+'</span>':'')+'</div>'+
       '<div class="p-body"><p class="p-brand">'+esc(p.b)+'</p><h3 class="p-name">'+esc(p.n)+'</h3><p class="p-spec">'+esc(p.s)+'</p><p class="p-price">Price on request</p></div>'+
       '<button class="p-add" type="button" data-add="'+p.id+'"><svg class="ico" style="width:18px;height:18px"><use href="#i-plus"/></svg><span>Add to quote</span></button></article>';
   }
@@ -571,7 +589,7 @@ footer{background:#14142B;color:#FFF6F4;margin-top:clamp(40px,5vw,64px)}
   }).join('');
 
   /* shop grid */
-  var cat='all', query='';
+  var cat='all', query='', showAll=false;
   var chips=document.getElementById('chips');
   chips.innerHTML=['all'].concat(Object.keys(CATS)).map(function(k){return '<button class="chip" type="button" data-chip="'+k+'" aria-pressed="'+(k==='all')+'">'+(k==='all'?'All':esc(CATS[k][0]))+'</button>'}).join('');
   function renderGrid(){
@@ -581,7 +599,10 @@ footer{background:#14142B;color:#FFF6F4;margin-top:clamp(40px,5vw,64px)}
       var hay=(p.n+' '+p.b+' '+p.s+' '+CATS[p.cat][0]).toLowerCase();
       return qs.every(function(w){return hay.indexOf(w)>-1});
     });
-    document.getElementById('grid').innerHTML=list.map(card).join('');
+    var limited=cat==='all'&&!query&&!showAll&&list.length>12;
+    document.getElementById('grid').innerHTML=(limited?list.slice(0,12):list).map(card).join('');
+    document.getElementById('more-wrap').hidden=!limited;
+    document.getElementById('more').textContent='Show all '+list.length+' products';
     document.getElementById('empty').hidden=list.length>0;
     document.getElementById('shop-title').textContent=query?'Results for “'+query+'”':(cat==='all'?'Shop all':CATS[cat][0]);
     document.getElementById('shop-count').textContent=list.length+(list.length===1?' product':' products');
@@ -589,6 +610,7 @@ footer{background:#14142B;color:#FFF6F4;margin-top:clamp(40px,5vw,64px)}
     markAdded();
   }
   function setCat(c){cat=c;renderGrid()}
+  document.getElementById('more').addEventListener('click',function(){showAll=true;renderGrid()});
   chips.addEventListener('click',function(e){var b=e.target.closest('[data-chip]');if(b){query='';document.getElementById('q').value='';setCat(b.dataset.chip)}});
   document.addEventListener('click',function(e){
     var a=e.target.closest('[data-cat]');
@@ -617,16 +639,22 @@ footer{background:#14142B;color:#FFF6F4;margin-top:clamp(40px,5vw,64px)}
 
   /* drawer */
   var drawer=document.getElementById('drawer'),scrim=document.getElementById('scrim'),lastFocus;
-  function openBag(){lastFocus=document.activeElement;drawer.classList.add('open');scrim.classList.add('open');drawer.setAttribute('aria-hidden','false');document.getElementById('close-bag').focus()}
-  function closeBag(){drawer.classList.remove('open');scrim.classList.remove('open');drawer.setAttribute('aria-hidden','true');if(lastFocus)lastFocus.focus()}
+  var outside=[].slice.call(document.querySelectorAll('header,main,footer,.announce,.mbar'));
+  function openBag(){lastFocus=document.activeElement;drawer.classList.add('open');scrim.classList.add('open');drawer.setAttribute('aria-hidden','false');outside.forEach(function(el){el.inert=true});document.getElementById('close-bag').focus()}
+  function closeBag(){drawer.classList.remove('open');scrim.classList.remove('open');drawer.setAttribute('aria-hidden','true');outside.forEach(function(el){el.inert=false});if(lastFocus)lastFocus.focus()}
+  drawer.inert=true;
+  var _open=openBag,_close=closeBag;openBag=function(){drawer.inert=false;_open()};closeBag=function(){_close();drawer.inert=true};
   document.getElementById('open-bag').addEventListener('click',openBag);
+  document.getElementById('mbar').addEventListener('click',openBag);
   document.getElementById('toast-view').addEventListener('click',function(){toast.classList.remove('show');openBag()});
   document.getElementById('close-bag').addEventListener('click',closeBag);
   scrim.addEventListener('click',closeBag);
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&drawer.classList.contains('open'))closeBag()});
   function renderBag(){
     var n=bag.reduce(function(s,l){return s+l.q},0), cnt=document.getElementById('bag-count');
+    if(String(n)!==cnt.textContent&&n>0){cnt.classList.remove('pop');void cnt.offsetWidth;cnt.classList.add('pop')}
     cnt.hidden=n===0;cnt.textContent=n;
+    var mb=document.getElementById('mbar');mb.classList.toggle('show',n>0);document.getElementById('mbar-n').textContent=n+(n===1?' item':' items')+' in your quote list';
     document.getElementById('bag-empty').hidden=bag.length>0;
     document.getElementById('lines').innerHTML=bag.map(function(l){
       var p=byId[l.id],c=CATS[p.cat][1];
